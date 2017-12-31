@@ -1,2 +1,2 @@
 # technology-stack
-技术栈
+技术栈学习资料
