@@ -1,6 +1,6 @@
 # 【Git使用小结】
 
-1.安装Git
+# 1.安装Git
 
 1.1 安装地址：https://git-scm.com/
 
