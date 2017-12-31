@@ -1,4 +1,5 @@
-#【Git使用小结】
+# 【Git使用小结】
+
 1.安装Git
 
 1.1 安装地址：https://git-scm.com/
@@ -11,14 +12,14 @@
       
       Git GUI    带UI界面的工具
 
-#2.配置全局变量
+# 2.配置全局变量
 
 2.1 git config --global user.name "tingli1991"
 
 2.2 git config --global user.email "litingxian@live.cn"
 
 
-#3.常用的Git命令
+# 3.常用的Git命令
 
 3.1 git status              查看当前版本的状态
 
@@ -37,7 +38,7 @@
 3.8 git mkdir [目录名]      新建文件夹
 
 
-#4.git 提交代码的过程
+# 4.git 提交代码的过程
 
 4.1 工作区             该区域主要是我们本机的代码工作区域
 
