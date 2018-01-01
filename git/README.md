@@ -38,13 +38,13 @@
         [远程master分支]     将本地master分支添加到远程master分支则使用 git push 命令完成
         
 #### 5.分支的基本操作指令
-        git branch [branchname]          创建分支命令（branchname表示分支名称）
+        git branch [branchname]          创建分支命令（branchname表示分支名称）
         git checkout [branchname]        切换分支命令（branchname表示分支名称）
         git checkout -b [branchname]     创建并切换分支命令（branchname表示分支名称 -b 表示创建分支）
         git branch -a                    查看所有分支
         git push origin [branchname]     提交指定分支到远程分支
         git pull origin [branchname]     更新远程分支到本地分支
-        git merge [branchname]           合并指定分支   
+        git merge [branchname]           合并指定分支
         
         
         
