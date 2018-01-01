@@ -46,6 +46,3 @@
         git pull origin [branchname]     更新远程分支到本地分支
         git merge [branchname]           合并指定分支
         
-        
-        
-        
