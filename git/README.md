@@ -1,11 +1,11 @@
 【Git使用小结】
 ===
-## 1.安装Git  
-1.1 安装地址：(https://git-scm.com/)<br>
-1.1.1 安装成功后包含如下三个软件：<br>
-        Git Bash   常用的命令行工具<br>
-        Git CMD<br>
-        Git GUI    带UI界面的工具<br>
+### 1.安装Git  
+#### 1.1 安装地址：(https://git-scm.com/)
+#### 1.1.1 安装成功后包含如下三个软件：  
+        Git Bash   常用的命令行工具  
+        Git CMD  
+        Git GUI    带UI界面的工具  
 ## 2.配置全局变量
 ### 2.1 git config --global user.name "tingli1991"
 ### 2.2 git config --global user.email "litingxian@live.cn"
