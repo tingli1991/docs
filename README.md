@@ -3,5 +3,5 @@
 
 目录结构
 -------
-> git                     //git版本控制相关<br>
-> webpack                 //webpack技术资料相关
+>git                      //git版本控制相关
+>webpack                  //webpack技术资料相关
