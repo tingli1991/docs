@@ -19,8 +19,10 @@
         git commit [文件名]     将暂存区代码添加到本地maser分支  
         git push [文件名]       将本地master分支添加到远程maser分支  
         git rm [文件名]         删除指定文件  
-        git mkdir [目录名]      新建文件夹  
-        
+        git mkdir [目录名]      新建文件夹 
+        git                     命令行翻页退出  
+        ctrl + c                强制退出  
+   
 #### 4.git 提交代码的过程
         [工作区]             该区域主要是我们本机的代码工作区域
         [暂存区]             将代码由工作去添加到缓存区使用git add 命令完成
