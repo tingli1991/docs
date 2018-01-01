@@ -7,8 +7,8 @@
         Git CMD    命令行窗口（不常用）<br>
         Git GUI    带UI界面的工具<br>
 
-#### 2.配置全局变量  
-        git config --global user.name "tingli1991"              设置的用户名  
+#### 2.配置全局变量
+        git config --global user.name "tingli1991"              设置的用户名  
         git config --global user.email "litingxian@live.cn"     设置邮件地址  
 
 #### 3.常用的Git命令
