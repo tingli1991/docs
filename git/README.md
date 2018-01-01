@@ -38,9 +38,6 @@
         [远程master分支]     将本地master分支添加到远程master分支则使用 git push 命令完成
         
 #### 5.分支的创建与切换
-##### 5.1 创建分支
-        git branch [branchname]          创建分支命令（branchname表示分支名称）
-##### 5.2 切换分支
-         checkout [branchname]           切换分支命令（branchname表示分支名称）
-##### 5.3 创建并切换分支
-        git checkout -b [branchname]     创建并切换分支命令（branchname表示分支名称 -b 表示创建分支）
+        git branch [branchname]          创建分支命令（branchname表示分支名称）
+        git checkout [branchname]        切换分支命令（branchname表示分支名称）
+        git checkout -b [branchname]     创建并切换分支命令（branchname表示分支名称 -b 表示创建分支）
