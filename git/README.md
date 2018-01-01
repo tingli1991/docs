@@ -39,5 +39,5 @@
         
 #### 5.分支的创建与切换
         git branch [branchname]          创建分支命令（branchname表示分支名称）
-        git checkout [branchname]        切换分支命令（branchname表示分支名称）
+        git checkout [branchname]        切换分支命令（branchname表示分支名称）
         git checkout -b [branchname]     创建并切换分支命令（branchname表示分支名称 -b 表示创建分支）
