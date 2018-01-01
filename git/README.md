@@ -24,13 +24,13 @@
         ctrl + c                        强制退出
         pwd                             查看当前工作目录
         git pull                        更新远程服务器代码
-        git log                         查看提交日志(当前版本之前的日志)
-        git reflog                      查看完整的版本日志
-        git reset --hard HEAD           把编辑的文件回退到当前版本的初始状态
-        git checkout --filname          撤销文件在工作去的代码修改
-        git reset HEAD --filenmae       撤销暂存区修改的代码
-        git reset --hard [版本号]        版本回退（更新到指定的版本,已经commit到本地分支）
-        
+        git log                         查看提交日志(当前版本之前的日志)
+        git reflog                      查看完整的版本日志
+        git reset --hard HEAD           把编辑的文件回退到当前版本的初始状态
+        git checkout --filname          撤销文件在工作去的代码修改
+        git reset HEAD --filenmae       撤销暂存区修改的代码
+        git reset --hard [版本号]        版本回退（更新到指定的版本,已经commit到本地分支）
+        
 #### 4.git 提交代码的过程
         [工作区]             该区域主要是我们本机的代码工作区域
         [暂存区]             将代码由工作去添加到缓存区使用git add 命令完成
