@@ -22,7 +22,7 @@
         git mkdir [目录名]      新建文件夹  
         
 #### 4.git 提交代码的过程
-        [工作区]             该区域主要是我们本机的代码工作区域  
-        [暂存区]             将代码由工作去添加到缓存区使用git add 命令完成  
-        [本地master分支]     将缓存区代码添加到master分支使用 git commit 命令完成  
-        [远程master分支]     将本地master分支添加到远程master分支则使用 git push 命令完成  
+        [工作区]             该区域主要是我们本机的代码工作区域
+        [暂存区]             将代码由工作去添加到缓存区使用git add 命令完成
+        [本地master分支]     将缓存区代码添加到master分支使用 git commit 命令完成
+        [远程master分支]     将本地master分支添加到远程master分支则使用 git push 命令完成
