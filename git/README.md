@@ -4,9 +4,9 @@
 ##### 1.1 安装地址：(https://git-scm.com/)
 ##### 1.1.1 安装成功后包含如下三个软件：  
         Git Bash   常用的命令行工具  
-        Git CMD    
-        Git GUI    带UI界面的工具  
-        
+        Git CMD    命令行窗口（不常用）  
+        Git GUI    带UI界面的工具  
+        
 #### 2.配置全局变量
         git config --global user.name "tingli1991"              设置的用户名  
         git config --global user.email "litingxian@live.cn"     设置邮件地址  
@@ -20,6 +20,7 @@
         git push [文件名]       将本地master分支添加到远程maser分支  
         git rm [文件名]         删除指定文件  
         git mkdir [目录名]      新建文件夹  
+        
 #### 4.git 提交代码的过程
         [工作区]             该区域主要是我们本机的代码工作区域  
         [暂存区]             将代码由工作去添加到缓存区使用git add 命令完成  
