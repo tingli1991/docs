@@ -8,9 +8,9 @@
         Git GUI    带UI界面的工具
 
 #### 2.配置全局变量
-        git config --global user.name "tingli1991"              设置的用户名  
-        git config --global user.email "litingxian@live.cn"     设置邮件地址  
-
+        git config --global user.name "tingli1991"              设置的用户名
+        git config --global user.email "litingxian@live.cn"     设置邮件地址
+        
 #### 3.常用的Git命令
         git status             查看当前版本的状态  
         git clone [项目地址]    克隆对应的项目  
