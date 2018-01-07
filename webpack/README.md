@@ -5,7 +5,7 @@
     npm install                 安装开发环境依赖包（后面新增参数 --production 则表示安装生产环境依赖包）
     
 ### 使用webpack命令打包js
-    webpack [源码文件路径] [打包文件路径]
+    webpack [源码文件路径] [打包文件路径]
 
 ### webpack-dev-server搭建服务器
     npm install webpack-dev-server -g               全局安装开发环境服务器（-g 替换成 --save-dev 表示本地开发环境）
