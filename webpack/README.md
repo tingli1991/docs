@@ -13,6 +13,8 @@
     webpack-dev-server --inline                     没有框架的方式运行
 
 ### 引入jquery
+#### 在单个js里面引入jquery
 ``` javascript
 var $ = require('jquery');
+$('#welcome').html('hello world');
 ```
