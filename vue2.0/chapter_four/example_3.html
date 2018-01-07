@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>实例3</title>
+    <script src="../../assets/js/vue/vue.js"></script>
+    <link href="../../assets/css/example.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>实例事件</h1>
+    <hr />
+    <div id="app">
+        {{a}}
+        <p><button @click="jia">+</button></p>
+    </div>
+    <p><button onclick="jian()">-</button></p>
+    <p><button onclick="off()">关闭</button></p>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                a: 1
+            },
+            methods: {
+                jia: function () {
+                    this.a++;
+                }
+            }
+        });
+
+        //$once 表示只调用一次
+        vm.$on('jian', function (num) {
+            console.log('执行了jian()');
+            this.a -= num;
+        });
+
+        function jian() {
+            //外部调用vue方法使用emit来实现
+            vm.$emit('jian', 2);
+        }
+
+        function off() {
+            vm.$off('jian');
+            console.log('jian的方法已经关闭');
+        }
+    </script>
+</body>
+</html>

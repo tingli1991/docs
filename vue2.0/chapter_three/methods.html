@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>methods</title>
+    <script src="../../assets/js/vue/vue.js"></script>
+    <link href="../../assets/css/example.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>methods</h1>
+    <hr />
+    <div id="app">
+        {{number}}
+        <p><button @click="jia(2,$event)">+</button></p>
+        <p><btn @click.native="jian"></btn></p>
+        <p><btn onclick="vm.jia(1)">外部访问构造器里的事件</btn></p>
+        <p>
+            <a v-on:click.stop="doThis">组织事件冒泡</a>
+            <form v-on:submit.prevent="onSubmit">提交但不再重载页面</form>
+            <a v-on:click.capture="doThis">添加事件侦听器时使用事件捕捉模式</a>
+            <div v-on:click.self="doThat">只当事件在该元素本身（而不是子元素）触发时触发回调</div>
+            <a v-on:click.stop.prevent="doThis">修饰符可以进行串联</a>
+
+        </p>
+    </div>
+    <script>
+        var btn = {
+            template: '<button>外部组件</button>'
+        };
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                number: 1
+            },
+            methods: {
+                jia: function (num, event) {
+                    if (num != '') {
+                        this.number += num;
+                    } else {
+                        this.number++;
+                    }
+                    console.log(event);
+                },
+                jian: function () {
+                    this.number--;
+                },
+                doThis: function () {
+
+                },
+                onSubmit: function () {
+
+                },
+                doThat: function () {
+
+                }
+            },
+            components: {
+                "btn": btn
+            }
+        });
+    </script>
+</body>
+</html>

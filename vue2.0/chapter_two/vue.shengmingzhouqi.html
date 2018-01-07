@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Vue 生命周期</title>
+    <script src="../../assets/js/vue/vue.js"></script>
+    <link href="../../assets/css/example.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Vue 生命周期</h1>
+    <hr />
+    <div id="app">
+        <p>{{message}}</p>
+        <p><button @click="jia">+</button></p>
+        <p><button onclick="vm.$destroy();">销毁</button></p>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: 1
+            },
+            methods: {
+                jia: function () {
+                    this.message++;
+                }
+            },
+            beforeCreate: function () {
+                //初始化数据
+                console.log('1-beforeCreate 初始化之后');
+            },
+            created: function () {
+                //节点创建完成
+                console.log('2-created 创建完成');
+            },
+            beforeMount: function () {
+                //挂载之前
+                console.log('3-created 挂载之前');
+            },
+            mounted: function () {
+                //
+                console.log('4-mounted 被创建（挂载完成）');
+            },
+            beforeUpdate: function () {
+                console.log('5-beforeUpdate 数据更新之前');
+            },
+            updated: function () {
+                console.log('6-updated 数据更新完成后');
+            },
+            activated: function () {
+                console.log('7-activated 激活');
+            },
+            deactivated: function () {
+                console.log('8-deactivated 解绑');
+            },
+            beforeDestroy: function () {
+                console.log('9-beforeDestroy 销毁之前');
+            },
+            destroyed: function () {
+                console.log('10-destroyed 销毁之后');
+            }
+        });
+    </script>
+</body>
+</html>

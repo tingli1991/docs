@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Vue.extend</title>
+    <script src="../../assets/js/vue/vue.js"></script>
+    <link href="../../assets/css/example.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Vue.extend</h1>
+    <hr />
+    <div id="header"></div>
+    <script>
+        var header_aaaa = Vue.extend({
+            template: ' <p>{{message}}</p> ',
+            data: function () {
+                return {
+                    message: 'Hello my is Header'
+                }
+            }
+        });
+
+        //挂载
+        new header_aaaa().$mount('#header');
+    </script>
+</body>
+</html>

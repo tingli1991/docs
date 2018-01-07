@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Vue.directive 自定义指令</title>
+    <script src="../../assets/js/vue/vue.js"></script>
+    <link href="../../assets/css/example.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Vue.directive 自定义指令</h1>
+    <hr />
+    <div id="app">
+        <div v-tingli.color="color" id="aaa">
+            {{num}}
+        </div>
+        <p>
+            <input type="button" @click="jia" value="+" />
+        </p>
+        <p>
+            <input type="button" onclick="xiezai()" value="卸载" />
+        </p>
+    </div>
+    <script>
+        Vue.directive('tingli', {
+            bind: function (el, binding, vnode) {
+                //被绑定事件（自定义指令生命周期第一阶段）
+                //el:表示选择节点
+                //binding:
+                el.style = 'color:' + binding.value;
+                console.log('1-bind');
+            },
+            inserted: function () {
+                //被绑到节点（自定义指令生命周期第二阶段）
+                console.log('2-inserted');
+            },
+            update: function () {
+                //组件更新（自定义指令生命周期第三阶段）
+                console.log('3-update');
+            },
+            componentUpdated: function (el, binding, vnode) {
+                //组件更新完成（自定义指令生命周期第四阶段）
+                el.style = 'color:green';
+                console.log('4-componentUpdated');
+            },
+            unbind: function () {
+                //解绑时触发（自定义指令生命周期第五阶段）
+                console.log('5-unbind');
+            }
+        });
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'hello Vue!!!',
+                color: 'red',
+                num: 10
+            },
+            methods: {
+                jia: function () {
+                    this.num++;
+                }
+            }
+        });
+
+        //卸载函数
+        function xiezai() {
+            vm.$destroy();
+        }
+    </script>
+</body>
+</html>

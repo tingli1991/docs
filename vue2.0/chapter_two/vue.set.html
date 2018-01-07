@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Vue.set</title>
+    <script src="../../assets/js/vue/vue.js"></script>
+    <link href="../../assets/css/example.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Vue.set</h1>
+    <hr />
+    <div id="app">
+        <ul>
+            <li v-for="good in goods">{{good.name}} - {{good.num}}</li>
+        </ul>
+        <p>总计{{count}}件产品</p>
+        <input type="button" onclick="add()" value="++" />
+        <input type="button" @click="clear" value="清空购物车" />
+    </div>
+    <script>
+        function add() {
+            //Vue.set(jsonValue, 'count', 4);
+            jsonValue.goods.push({ name: 'house', num: '1' });
+            vm.count++;
+        }
+
+        var jsonValue = {
+            count: 3,
+            goods: [
+                { name: 'car', num: '1' },
+                { name: 'pen', num: '2' }
+            ]
+        }
+        var vm = new Vue({
+            el: '#app',
+            data: jsonValue,
+            methods: {
+                clear: function () {
+                    this.count = 0
+                    this.goods = [];
+                }
+            }
+        });
+    </script>
+</body>
+</html>
