@@ -7,12 +7,17 @@ npm install                 安装开发环境依赖包（后面新增�
 ```
 
 ### 使用webpack命令打包js
-    webpack [源码文件路径] [打包文件路径]
+``` Bash
+webpack [源码文件路径] [打包文件路径]
+```
+    
 
 ### webpack-dev-server搭建服务器
-    npm install webpack-dev-server -g               全局安装开发环境服务器（-g 替换成 --save-dev 表示本地开发环境）
-    webpack-dev-server                              正常运行站点
-    webpack-dev-server --inline                     没有框架的方式运行
+``` Bash
+npm install webpack-dev-server -g               全局安装开发环境服务器（-g 替换成 --save-dev 表示本地开发环境）
+webpack-dev-server                              正常运行站点
+webpack-dev-server --inline                     没有框架的方式运行
+```
 
 ### 引入jquery
 #### 在单个js里面引入jquery
