@@ -47,9 +47,9 @@ $('#welcome').html('hello world');
   "license": "ISC",
   "scripts": {
     "pro":"set NODE_ENV=pro&& webpack",
-	"dev":"set NODE_ENV=dev&& webpack",
+    "dev":"set NODE_ENV=dev&& webpack",
     "start": "webpack-dev-server --inline",
-	"linux-pro":"export NODE_ENV=pro&& webpack"
+    "linux-pro":"export NODE_ENV=pro&& webpack"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
