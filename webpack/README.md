@@ -14,7 +14,5 @@
 
 ### 引入jquery
 ``` javascript
-    {
-
-    }
+var $ = require('jquery');
 ```
