@@ -13,6 +13,8 @@
     webpack-dev-server --inline                     没有框架的方式运行
 
 ### 引入jquery
-{
+``` javascript
+    {
 
-}
+    }
+```
