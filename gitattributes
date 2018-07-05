@@ -27,7 +27,7 @@
 *.csproj    linguist-language=csharp
 *.aspx      linguist-language=csharp
 *.html      linguist-language=csharp
-*.htm      linguist-language=csharp
+*.htm       linguist-language=csharp
 #*.vbproj    merge=binary
 #*.vcxproj   merge=binary
 #*.vcproj    merge=binary
