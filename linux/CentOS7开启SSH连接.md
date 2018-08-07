@@ -23,7 +23,7 @@
 
 #### 常见问题
 ##### error: kex protocol error: type 30 seq 1 [preauth] 正确处理姿势
-在sshd-config文件添加如下代码便可解决  
-```
+在sshd-config文件添加如下代码便可解决，然后重新执行命令 sudo service sshd start 即可
+``` Java
 KexAlgorithms curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1
 ```
