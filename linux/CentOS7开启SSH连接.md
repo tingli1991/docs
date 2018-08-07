@@ -6,10 +6,11 @@
 
 ![图2](https://github-1251498502.cos.ap-chongqing.myqcloud.com/CentOS7%E5%BC%80%E5%90%AFSSH%E8%BF%9E%E6%8E%A5/20161008123406762.jpg)
 #### 2.修改sshd_config配置文件
-  找到了 /etc/ssh/  目录下的sshd服务配置文件 sshd_config，用vi编辑器打开
+  找到了 **/etc/ssh/** 目录下的sshd服务配置文件 **sshd_config**，用vi编辑器打开  
   2.1 将文件中，关于监听端口、监听地址前的 #号去除，具体操作步骤如下图：
-![图3](https://github-1251498502.cos.ap-chongqing.myqcloud.com/CentOS7%E5%BC%80%E5%90%AFSSH%E8%BF%9E%E6%8E%A5/20161008123807764.jpg)
-  2.2 然后开启允许远程登录
-![图4](https://github-1251498502.cos.ap-chongqing.myqcloud.com/CentOS7%E5%BC%80%E5%90%AFSSH%E8%BF%9E%E6%8E%A5/20161008123406762.jpg)
-![图5](https://github-1251498502.cos.ap-chongqing.myqcloud.com/CentOS7%E5%BC%80%E5%90%AFSSH%E8%BF%9E%E6%8E%A5/20161008123406762.jpg)
+![图3](https://github-1251498502.cos.ap-chongqing.myqcloud.com/CentOS7%E5%BC%80%E5%90%AFSSH%E8%BF%9E%E6%8E%A5/20161008123807764.jpg)  
+  2.2 然后开启允许远程登录  
+  ![图4](https://github-1251498502.cos.ap-chongqing.myqcloud.com/CentOS7%E5%BC%80%E5%90%AFSSH%E8%BF%9E%E6%8E%A5/20161008123926358.jpg)  
+  2.3 最后，开启使用用户名密码来作为连接验证
+  ![图5](https://github-1251498502.cos.ap-chongqing.myqcloud.com/CentOS7%E5%BC%80%E5%90%AFSSH%E8%BF%9E%E6%8E%A5/20161008124037166.jpg)
   
