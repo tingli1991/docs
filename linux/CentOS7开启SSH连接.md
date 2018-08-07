@@ -12,5 +12,11 @@
   2.2 然后开启允许远程登录   
   ![图4](https://github-1251498502.cos.ap-chongqing.myqcloud.com/CentOS7%E5%BC%80%E5%90%AFSSH%E8%BF%9E%E6%8E%A5/20180807231423.png)  
   2.3 最后，开启使用用户名密码来作为连接验证   
-  ![图5](https://github-1251498502.cos.ap-chongqing.myqcloud.com/CentOS7%E5%BC%80%E5%90%AFSSH%E8%BF%9E%E6%8E%A5/20161008124037166.jpg)
-  
+  ![图5](https://github-1251498502.cos.ap-chongqing.myqcloud.com/CentOS7%E5%BC%80%E5%90%AFSSH%E8%BF%9E%E6%8E%A5/20161008124037166.jpg)   
+  完成以上步骤后保存并推出vi编辑器
+#### 3.检查  sshd  服务是否已经开启，输入ps -e | grep sshd   
+![图5](https://github-1251498502.cos.ap-chongqing.myqcloud.com/CentOS7%E5%BC%80%E5%90%AFSSH%E8%BF%9E%E6%8E%A5/20161008124257998.jpg)   
+或者输入netstat -an | grep 22  检查  22 号端口是否开启监听
+![图6](https://github-1251498502.cos.ap-chongqing.myqcloud.com/CentOS7%E5%BC%80%E5%90%AFSSH%E8%BF%9E%E6%8E%A5/20161008124408719.jpg)   
+
+
