@@ -21,4 +21,7 @@
   或者输入netstat -an | grep 22  检查  22 号端口是否开启监听(如果你的服务器没有netstat指令请自行安装net-tools工具)
   ![图7](https://github-1251498502.cos.ap-chongqing.myqcloud.com/CentOS7%E5%BC%80%E5%90%AFSSH%E8%BF%9E%E6%8E%A5/20161008124408719.jpg)   
 
-
+#### 常见问题
+##### error: kex protocol error: type 30 seq 1 [preauth] 正确处理姿势
+在sshd-config文件添加如下代码便可解决  
+KexAlgorithms curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha1
