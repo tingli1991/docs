@@ -13,4 +13,4 @@
 ![新建项目流程5](https://github-1251498502.cos.ap-chongqing.myqcloud.com/Exceptionless/20180812141436_13.png)  
 
 1.2 打开visual studio 2017并新建一个AspNetCore的WebAPI项目(项目名称和解决方案名称可以自己随便取)  
-![新建的AspNet WebAPI项目](https://github-1251498502.cos.ap-chongqing.myqcloud.com/Exceptionless/20180812141436_14.png) 
+![新建的AspNet WebAPI项目](https://github-1251498502.cos.ap-chongqing.myqcloud.com/Exceptionless/20180812141436_14.png?radnm=1) 
