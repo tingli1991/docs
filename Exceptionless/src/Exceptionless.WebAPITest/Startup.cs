@@ -40,6 +40,9 @@ namespace Exceptionless.WebAPITest
                 app.UseHsts();
             }
 
+            ExceptionlessClient.Default.Configuration.ApiKey = Configuration.GetSection("Exceptionless:ApiKey").Value;
+            ExceptionlessClient.Default.Configuration.ServerUrl = Configuration.GetSection("Exceptionless:ServerUrl").Value;
+            app.UseExceptionless();
             app.UseHttpsRedirection();
             app.UseMvc();
         }
