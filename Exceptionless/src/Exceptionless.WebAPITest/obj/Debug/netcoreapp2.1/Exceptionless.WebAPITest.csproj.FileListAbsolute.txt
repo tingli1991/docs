@@ -12,3 +12,17 @@ E:\Platform\technology-stack\Exceptionless\src\Exceptionless.Test\Exceptionless.
 E:\Platform\technology-stack\Exceptionless\src\Exceptionless.Test\Exceptionless.WebAPITest\obj\Debug\netcoreapp2.1\Exceptionless.WebAPITest.RazorTargetAssemblyInfo.cache
 E:\Platform\technology-stack\Exceptionless\src\Exceptionless.Test\Exceptionless.WebAPITest\obj\Debug\netcoreapp2.1\Exceptionless.WebAPITest.dll
 E:\Platform\technology-stack\Exceptionless\src\Exceptionless.Test\Exceptionless.WebAPITest\obj\Debug\netcoreapp2.1\Exceptionless.WebAPITest.pdb
+E:\Platform\technology-stack\Exceptionless\src\Exceptionless.WebAPITest\bin\Debug\netcoreapp2.1\Exceptionless.WebAPITest.deps.json
+E:\Platform\technology-stack\Exceptionless\src\Exceptionless.WebAPITest\bin\Debug\netcoreapp2.1\Exceptionless.WebAPITest.runtimeconfig.json
+E:\Platform\technology-stack\Exceptionless\src\Exceptionless.WebAPITest\bin\Debug\netcoreapp2.1\Exceptionless.WebAPITest.runtimeconfig.dev.json
+E:\Platform\technology-stack\Exceptionless\src\Exceptionless.WebAPITest\bin\Debug\netcoreapp2.1\Exceptionless.WebAPITest.dll
+E:\Platform\technology-stack\Exceptionless\src\Exceptionless.WebAPITest\bin\Debug\netcoreapp2.1\Exceptionless.WebAPITest.pdb
+E:\Platform\technology-stack\Exceptionless\src\Exceptionless.WebAPITest\obj\Debug\netcoreapp2.1\Exceptionless.WebAPITest.csprojAssemblyReference.cache
+E:\Platform\technology-stack\Exceptionless\src\Exceptionless.WebAPITest\obj\Debug\netcoreapp2.1\Exceptionless.WebAPITest.csproj.CoreCompileInputs.cache
+E:\Platform\technology-stack\Exceptionless\src\Exceptionless.WebAPITest\obj\Debug\netcoreapp2.1\Exceptionless.WebAPITest.RazorAssemblyInfo.cache
+E:\Platform\technology-stack\Exceptionless\src\Exceptionless.WebAPITest\obj\Debug\netcoreapp2.1\Exceptionless.WebAPITest.RazorAssemblyInfo.cs
+E:\Platform\technology-stack\Exceptionless\src\Exceptionless.WebAPITest\obj\Debug\netcoreapp2.1\Exceptionless.WebAPITest.AssemblyInfoInputs.cache
+E:\Platform\technology-stack\Exceptionless\src\Exceptionless.WebAPITest\obj\Debug\netcoreapp2.1\Exceptionless.WebAPITest.AssemblyInfo.cs
+E:\Platform\technology-stack\Exceptionless\src\Exceptionless.WebAPITest\obj\Debug\netcoreapp2.1\Exceptionless.WebAPITest.RazorTargetAssemblyInfo.cache
+E:\Platform\technology-stack\Exceptionless\src\Exceptionless.WebAPITest\obj\Debug\netcoreapp2.1\Exceptionless.WebAPITest.dll
+E:\Platform\technology-stack\Exceptionless\src\Exceptionless.WebAPITest\obj\Debug\netcoreapp2.1\Exceptionless.WebAPITest.pdb

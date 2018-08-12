@@ -11512,11 +11512,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Platform\\technology-stack\\Exceptionless\\src\\Exceptionless.Test\\Exceptionless.WebAPITest\\Exceptionless.WebAPITest.csproj",
+      "projectUniqueName": "E:\\Platform\\technology-stack\\Exceptionless\\src\\Exceptionless.WebAPITest\\Exceptionless.WebAPITest.csproj",
       "projectName": "Exceptionless.WebAPITest",
-      "projectPath": "E:\\Platform\\technology-stack\\Exceptionless\\src\\Exceptionless.Test\\Exceptionless.WebAPITest\\Exceptionless.WebAPITest.csproj",
+      "projectPath": "E:\\Platform\\technology-stack\\Exceptionless\\src\\Exceptionless.WebAPITest\\Exceptionless.WebAPITest.csproj",
       "packagesPath": "C:\\Users\\litin\\.nuget\\packages\\",
-      "outputPath": "E:\\Platform\\technology-stack\\Exceptionless\\src\\Exceptionless.Test\\Exceptionless.WebAPITest\\obj\\",
+      "outputPath": "E:\\Platform\\technology-stack\\Exceptionless\\src\\Exceptionless.WebAPITest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
