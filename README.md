@@ -9,3 +9,7 @@
 >linux[Linux技术资料]  
 >vue2.0[vue2.0技术资料]  
 >webpack[webpack技术资料]
+
+
+## 好文推荐
+**1. Newtonsoft高级应用：** https://www.cnblogs.com/linyijia/p/5845771.html
