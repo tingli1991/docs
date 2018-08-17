@@ -4,7 +4,12 @@
 
 **官&nbsp;网：**  http://exceptionless.com  
 **ElasticSearch地址：** https://www.elastic.co/downloads/elasticsearch  
-**Exceptionless的GitHub地址：**  https://github.com/exceptionless/Exceptionless/releases
+**Exceptionless的GitHub地址：**  https://github.com/exceptionless/Exceptionless/releases  
+
+**好文推荐：**
+1. https://www.cnblogs.com/yilezhu/p/9339017.html  
+2. https://www.cnblogs.com/uptothesky/p/5864863.html  
+3. https://www.cnblogs.com/savorboard/p/exceptionless.html
 
 **Exceptionless部署，需要服务器环境为：**  
 **1. 项目依赖**  
