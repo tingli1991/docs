@@ -48,7 +48,7 @@
         
 ### 常见问题
 #### 1. .gitignore规则不生效的解决办法（按照如下的命令一次输入即可）
-``` shell
+``` Base
 git rm -r --cached .
 git add .
 git commit -m 'update .gitignore'
