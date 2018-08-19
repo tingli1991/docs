@@ -46,3 +46,11 @@
         git pull origin [branchname]     更新远程分支到本地分支
         git merge [branchname]           合并指定分支
         
+### 常见问题
+#### 1. .gitignore规则不生效的解决办法（按照如下的命令一次输入即可）
+``` shell
+git rm -r --cached .
+git add .
+git commit -m 'update .gitignore'
+git push
+```
