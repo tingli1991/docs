@@ -12,6 +12,23 @@
 ### 关于docker的相关链接   
 * 官网： https://www.docker.com/ 
 * 官方镜像仓库：https://hub.docker.com/ 
-* 官网中文文档：http://www.docker-cn.com/what-docker 
+* 官网中文文档：https://docs.docker-cn.com/  
 
-### 
+### 安装 Docker 
+Docker的安装其实很简单，官网已经有很成熟的教程，直接按照官方教程一步一步走就可以啦，建议搭建安装docker ce的社区版本(当然啦有钱任性也是可以装ee版的，哈哈)，具体的链接如下（记得要找准自己的安装环境哟，比如我的就是Centos7那么我肯定就选择Centos7啦）：  
+https://docs.docker-cn.com/engine/installation/
+
+### Docker的镜像、容器以及仓储的关系 
+* **镜像：** 指的就是打包好的应用（镜像通常分为，仓库镜像和本地镜像两种）  
+* **仓库：** 存储镜像的地方通常我们把它称之为仓库，例如：http://hub.docker.com就是docker官方提供的仓库 
+* **容器：** 所谓的容器则就是基于镜像所运行出来的环境，我们则把它称之为容器 
+* **基本命令介绍**   
+
+|        命令                      |                解析                                          |
+|----------------------------------|--------------------------------------------------------------|
+| docker --version                 | 查看docker的版本号                                           |
+| docker --help                    | 查看docker的帮助文档                                         |
+| docker xxx --help                | 查看具体命令的帮助文档(xxx表示子命令)                        |
+| docker run xxx                   | 拉去docker镜像(xxx:表示镜像名称，例如redis)                  |
+| docker images                    | 查看本地cocker存放的镜像                                     |
+| docker ps                        | 查看当前正在运行的容器                                       |
