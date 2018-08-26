@@ -40,6 +40,21 @@ Docker的安装其实很简单，官网已经有很成熟的教程，直接按�
 * **仓库：** 存储镜像的地方通常我们把它称之为仓库，例如：http://hub.docker.com 就是docker官方提供的仓库 
 * **容器：** 所谓的容器则就是基于镜像所运行出来的环境，我们则把它称之为容器 
 
+### 配置镜像加速器(以阿里为例)  
+* **第一步：** 登录 [阿里开发者平台](https://dev.aliyun.com) 
+* **第二步：** 接着点击首页右上角的【击管理中心】按钮，进入到管理控制台界面，并在左边的菜单栏找到并点击【镜像加速器】按钮，那么這个时候我们就可以在這个页面申请得到一个阿里给我们分配的加速地址(例如：https://2g2ra1ex.mirror.aliyuncs.com) 
+* **第三步：** 拿到加速地址之后就该我们改配置的时候来了(由于系统的不同，操作方式有却别，本文只讲Centos7，而且阿里和docker的文档其实都有)  
+```Bash
+sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": ["https://2g2ra1ex.mirror.aliyuncs.com"]
+}
+EOF
+sudo systemctl daemon-reload
+sudo systemctl restart docker
+```
+
 ### 构建单机多容器的运行环境（docker命令：docker run -d -p --name image） 
 ![环境示意图](https://github-1251498502.cos.ap-chongqing.myqcloud.com/Docker/20180826184415.png)  
 ![集群管理后台显示](https://github-1251498502.cos.ap-chongqing.myqcloud.com/Docker/20180826212023.png)  
