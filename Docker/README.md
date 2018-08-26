@@ -15,8 +15,7 @@
 * 官网中文文档：https://docs.docker-cn.com/  
 
 ### 安装 Docker 
-Docker的安装其实很简单，官网已经有很成熟的教程，直接按照官方教程一步一步走就可以啦，建议搭建安装docker ce的社区版本(当然啦有钱任性也是可以装ee版的，哈哈)，具体的链接如下（记得要找准自己的安装环境哟，比如我的就是Centos7那么我肯定就选择Centos7啦）：  
-https://docs.docker-cn.com/engine/installation/
+Docker的安装其实很简单，官网已经有很成熟的教程，直接按照官方教程一步一步走就可以啦，建议搭建安装docker ce的社区版本(当然啦有钱任性也是可以装ee版的，哈哈)，具体的链接（记得要找准自己的安装环境哟，比如我的就是Centos7那么我肯定就选择Centos7啦）：https://docs.docker-cn.com/engine/installation/  
 
 ### Docker的镜像、容器以及仓储的关系 
 * **镜像：** 指的就是打包好的应用（镜像通常分为，仓库镜像和本地镜像两种）  
