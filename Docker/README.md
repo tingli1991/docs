@@ -16,16 +16,8 @@
 
 ### Docker 图形化管理工具    
 * **portainer.io：**  [官网地址](https://portainer.io/) [官网安装教程](https://portainer.io/install.html)  [中文安装教程](http://blog.51cto.com/ganbing/2083051)  
-*  ****
 
-### 安装 Docker 
-Docker的安装其实很简单，官网已经有很成熟的教程，直接按照官方教程一步一步走就可以啦，建议搭建安装docker ce的社区版本(当然啦有钱任性也是可以装ee版的，哈哈)，具体的链接（记得要找准自己的安装环境哟，比如我的就是Centos7那么我肯定就选择Centos7啦）：https://docs.docker-cn.com/engine/installation/  
-
-### Docker的镜像、容器以及仓储的关系 
-* **镜像：** 指的就是打包好的应用（镜像通常分为，仓库镜像和本地镜像两种）  
-* **仓库：** 存储镜像的地方通常我们把它称之为仓库，例如：http://hub.docker.com 就是docker官方提供的仓库 
-* **容器：** 所谓的容器则就是基于镜像所运行出来的环境，我们则把它称之为容器 
-* **基本命令介绍**   
+### 基本命令介绍  
 
 |        命令                      |                解析                                          |
 |----------------------------------|--------------------------------------------------------------|
@@ -37,7 +29,16 @@ Docker的安装其实很简单，官网已经有很成熟的教程，直接按�
 | docker ps                        | 查看当前正在运行的容器                                       |
 | sudo systemctl start docker      | 启动已经安装好的docker                                       |
 | sudo systemctl restart docker    | 重启docker服务                                               |
-| sudo systemctl stop docker       | 停止docker服务                                               |
+| sudo systemctl stop docker       | 停止docker服务                                               |  
+
+
+### 安装 Docker 
+Docker的安装其实很简单，官网已经有很成熟的教程，直接按照官方教程一步一步走就可以啦，建议搭建安装docker ce的社区版本(当然啦有钱任性也是可以装ee版的，哈哈)，具体的链接（记得要找准自己的安装环境哟，比如我的就是Centos7那么我肯定就选择Centos7啦）：https://docs.docker-cn.com/engine/installation/  
+
+### Docker的镜像、容器以及仓储的关系 
+* **镜像：** 指的就是打包好的应用（镜像通常分为，仓库镜像和本地镜像两种）  
+* **仓库：** 存储镜像的地方通常我们把它称之为仓库，例如：http://hub.docker.com 就是docker官方提供的仓库 
+* **容器：** 所谓的容器则就是基于镜像所运行出来的环境，我们则把它称之为容器 
 
 ### 构建单机多容器的运行环境（docker命令：docker run -d -p --name image） 
 ![环境示意图](https://github-1251498502.cos.ap-chongqing.myqcloud.com/Docker/20180826184415.png)  
