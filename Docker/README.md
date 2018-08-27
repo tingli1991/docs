@@ -55,6 +55,10 @@ Docker的安装其实很简单，官网已经有很成熟的教程，直接按�
   sudo systemctl restart docker
 ```
 
+### docker容器挂载Host Volume
+
+
+
 ### 构建单机多容器的运行环境（docker命令：docker run -d -p --name image） 
 ![环境示意图](https://github-1251498502.cos.ap-chongqing.myqcloud.com/Docker/20180826184415.png)  
 ![集群管理后台显示](https://github-1251498502.cos.ap-chongqing.myqcloud.com/Docker/20180826212023.png)  
