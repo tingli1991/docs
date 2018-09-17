@@ -69,7 +69,7 @@ RestartSec=42s
 [Install]
 WantedBy=multi-user.target
 ```
-#### 2.将supervisord文件拷贝（或者移动）到“/usr/lib/systemd/system/supervisord.service”：
+#### 2.将supervisord.service文件拷贝（或者移动）到“/usr/lib/systemd/system/supervisord.service”：
 ```bash
 mv supervisord.service /usr/lib/systemd/system/supervisord.service
 ``` 
