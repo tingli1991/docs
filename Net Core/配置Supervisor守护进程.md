@@ -50,7 +50,7 @@ ps -ef | grep AnuoApc             查看指定的项目AutoApc是否生效
 | ps -ef \| grep supervisord      | 查看supervisord进程                                                                                                                                   |
 
 ## 制作Supervisor开机启动(附加内容)  
-#### 1.新建一个“supervisord”文件,内容如下：
+#### 1.新建一个“supervisord.service”文件,内容如下：
 ```bash
 # dservice for systemd (CentOS 7.0+)
 # by ET-CS (https://github.com/ET-CS)
@@ -69,9 +69,9 @@ RestartSec=42s
 [Install]
 WantedBy=multi-user.target
 ```
-#### 2.将supervisord文件拷贝（或者移动）到“/usr/lib/systemd/system/supervisord.service”目录：
+#### 2.将supervisord文件拷贝（或者移动）到“/usr/lib/systemd/system/supervisord.service”：
 ```bash
-mv supervisord /usr/lib/systemd/system/supervisord
+mv supervisord.service /usr/lib/systemd/system/supervisord.service
 ``` 
 #### 3.启动
 ```bash
