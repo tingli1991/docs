@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/admin_style.css" />
+	<link rel="stylesheet" type="text/css" href="css/skins/tpphp.css" />
+	<link type="text/css" rel="stylesheet" href="js/jQueryZdialog/css/zdialog.css" />
+	<script type="text/javascript" src="vue/vue.min.js"></script>
+	<script type="text/javascript" src="vue/vue-resource.js"></script>
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/js.cookie.min.js"></script>
+	<script type="text/javascript" src="js/jQueryZdialog/js/zdialog.js"></script>
+	<script type="text/javascript" src="js/keepwatch.config.js"></script>
+	<script type="text/javascript" src="js/artDialog.js"></script>
+	<script type="text/javascript" src="js/iframe.js"></script>
+</head>
+
+<body class="right_body">
+	<div id="app_main_manager">
+		<div class="body">
+			<div class="top_subnav">Keepwatch 排班系统 ＞ 首页</div>
+			<div class="title">
+				<div class="title_info zs">
+					{{realName}} 您好，欢迎使用Keepwatch 排班系统<label>【<span style="color:brown;">当前登录账户：</span>{{userName}}】</label>
+				</div>
+			</div>
+			<div class="quick">
+				<div class="login_info">
+					您的注册的时间是：2011-12-27 18:53 (不是您登录的？<a href="login.html" style="color:red;">请点这里</a>)
+				</div>
+				<p class="line">
+				</p>
+				<div class="quick_block">
+					<a href="#"><img src="images/index_ico.jpg"><span>首页</span></a>
+					<a href="#"><img src="images/add_ico.jpg"><span>值班管理</span></a>
+					<a href="#"><img src="images/tj_ico.jpg"><span>数据统计</span></a>
+					<a href="#"><img src="images/serch_ico.jpg"><span>查询</span></a>
+					</a>
+				</div>
+			</div>
+			<div style="clear:both"></div>
+			<div class="use_meth">
+				<div class="title">
+					<div class="title_info light">Keepwatch 排班系统 使用指南 </div>
+				</div>
+				<p><span>您可以快速管理我们的员工信息 </span><a href="#">员工管理</a></p>
+				<p><span>您可以快速的进行值班人员的安排工作</span><a href="#">值班管理</a> </p>
+			</div>
+			<p class="line">
+			</p>
+		</div>
+	</div>
+</body>
+<script>
+	var accessToken = Cookies.get(keepwatchConf.keepwatch_accesstokenKey);
+	new Vue({
+		el: '#app_main_manager',
+		data: {
+			"userName": "",
+			"realName": "",
+			"AccessToken": accessToken
+		},
+		http: {
+			root: '/',
+			headers: {
+				"AccessToken": accessToken
+			}
+		},
+		mounted: function () {
+			var self = this;
+			var apiurl = keepwatchConf.serviceUrl + "/user/getUserByAccessToken?accessToken=" + self.$data.AccessToken;
+			self.$http.get(apiurl).then(function (response) {
+				if (response.body.success) {
+					this.$data.userName = response.body.data.username;
+					this.$data.realName = response.body.data.realname;
+				}
+			});
+		}
+	});
+</script>
+
+</html>

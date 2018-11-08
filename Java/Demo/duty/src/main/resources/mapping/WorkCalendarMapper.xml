@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="duty.dao.WorkCalendarMapper">
+	<resultMap id="BaseResultMap" type="duty.entity.WorkCalendar">
+		<id column="Id" jdbcType="INTEGER" property="id" />
+		<result column="UserId" jdbcType="INTEGER" property="userid" />
+		<result column="BeginTime" jdbcType="TIMESTAMP"
+			property="begintime" />
+		<result column="EndTime" jdbcType="TIMESTAMP"
+			property="endtime" />
+		<result column="CreateTime" jdbcType="TIMESTAMP"
+			property="createtime" />
+		<result column="Remark" jdbcType="VARCHAR" property="remark" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		Id, UserId, BeginTime, EndTime, CreateTime, Remark
+	</sql>
+	<select id="selectByPrimaryKey"
+		parameterType="java.lang.Integer" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from workcalendar
+		where Id = #{id,jdbcType=INTEGER}
+	</select>
+	<select id="getWorkCalendarList" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from workcalendar
+	</select>
+	<delete id="deleteByPrimaryKey"
+		parameterType="java.lang.Integer">
+		delete from workcalendar
+		where Id =
+		#{id,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert" parameterType="duty.entity.WorkCalendar">
+		insert into workcalendar (Id,
+		UserId, BeginTime,
+		EndTime, CreateTime, Remark
+		)
+		values
+		(#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER},
+		#{begintime,jdbcType=TIMESTAMP},
+		#{endtime,jdbcType=TIMESTAMP},
+		#{createtime,jdbcType=TIMESTAMP}, #{remark,jdbcType=VARCHAR}
+		)
+	</insert>
+	<insert id="insertSelective"
+		parameterType="duty.entity.WorkCalendar">
+		insert into workcalendar
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				Id,
+			</if>
+			<if test="userid != null">
+				UserId,
+			</if>
+			<if test="begintime != null">
+				BeginTime,
+			</if>
+			<if test="endtime != null">
+				EndTime,
+			</if>
+			<if test="createtime != null">
+				CreateTime,
+			</if>
+			<if test="remark != null">
+				Remark,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="userid != null">
+				#{userid,jdbcType=INTEGER},
+			</if>
+			<if test="begintime != null">
+				#{begintime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="endtime != null">
+				#{endtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="createtime != null">
+				#{createtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="remark != null">
+				#{remark,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective"
+		parameterType="duty.entity.WorkCalendar">
+		update workcalendar
+		<set>
+			<if test="userid != null">
+				UserId = #{userid,jdbcType=INTEGER},
+			</if>
+			<if test="begintime != null">
+				BeginTime = #{begintime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="endtime != null">
+				EndTime = #{endtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="createtime != null">
+				CreateTime = #{createtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="remark != null">
+				Remark = #{remark,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where Id = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey"
+		parameterType="duty.entity.WorkCalendar">
+		update workcalendar
+		set UserId =
+		#{userid,jdbcType=INTEGER},
+		BeginTime =
+		#{begintime,jdbcType=TIMESTAMP},
+		EndTime =
+		#{endtime,jdbcType=TIMESTAMP},
+		CreateTime =
+		#{createtime,jdbcType=TIMESTAMP},
+		Remark = #{remark,jdbcType=VARCHAR}
+		where Id = #{id,jdbcType=INTEGER}
+	</update>
+</mapper>
