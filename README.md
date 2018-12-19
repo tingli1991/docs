@@ -5,6 +5,7 @@
 [Navicat Premium 破解教程](https://www.jianshu.com/p/42a33b0dda9c)  
 [Vs Code 搭建Java开发环境](https://www.cnblogs.com/WangBoBlog/p/9464281.html)  
 [Elasticsearch5.6.x安装教程](https://www.cnblogs.com/lizichao1991/p/7809156.html)  
+[Centos 7搭建Gitlab服务器超详细](https://blog.csdn.net/duyusean/article/details/80011540)
 
 ### 技术知识收集   
 [Newtonsoft高级应用](https://www.cnblogs.com/linyijia/p/5845771.html)  
