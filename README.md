@@ -12,4 +12,5 @@
 [一致性协议之ZAB协议](https://www.cnblogs.com/stateis0/p/9062133.html)  
 [Spring boot +Mybatis 实战](https://blog.csdn.net/WYpersist/article/details/80384707)  
 [.NET CORE 使用Consul实现服务注册与发现](https://mp.weixin.qq.com/s/BLwPmRH8bxRBE4momN6URg)   
-[CentOS7使用firewalld打开关闭防火墙与端口](https://www.cnblogs.com/moxiaoan/p/5683743.html)
+[CentOS7使用firewalld打开关闭防火墙与端口](https://www.cnblogs.com/moxiaoan/p/5683743.html)  
+[EKL原理与介绍](http://www.cnblogs.com/aresxin/p/8035137.html)
