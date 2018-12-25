@@ -19,3 +19,4 @@
 [Kafka---如何配置Kafka集群和zookeeper集群](https://www.cnblogs.com/5iTech/articles/6043224.html)    
 [Kafka Manager的使用](https://blog.csdn.net/qq_33689414/article/details/80958045)  
 [EKL原理与介绍](http://www.cnblogs.com/aresxin/p/8035137.html)  
+[构建亿级 ELK 日志平台](http://blog.51cto.com/13527416/2117141)  
