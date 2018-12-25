@@ -5,7 +5,7 @@
 [Navicat Premium 破解教程](https://www.jianshu.com/p/42a33b0dda9c)  
 [Vs Code 搭建Java开发环境](https://www.cnblogs.com/WangBoBlog/p/9464281.html)  
 [Elasticsearch5.6.x安装教程](https://www.cnblogs.com/lizichao1991/p/7809156.html)  
-[Centos 7搭建Gitlab服务器超详细](https://blog.csdn.net/duyusean/article/details/80011540)
+[Centos 7搭建Gitlab服务器超详细](https://blog.csdn.net/duyusean/article/details/80011540)  
 [Zookeeper集群搭建](https://www.cnblogs.com/linuxprobe/p/5851699.html)    
 [kafka集群搭建](https://my.oschina.net/orrin/blog/1834218)  
 [Kafka---如何配置Kafka集群和zookeeper集群](https://www.cnblogs.com/5iTech/articles/6043224.html)  
