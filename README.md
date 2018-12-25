@@ -20,3 +20,4 @@
 [Kafka Manager的使用](https://blog.csdn.net/qq_33689414/article/details/80958045)  
 [EKL原理与介绍](http://www.cnblogs.com/aresxin/p/8035137.html)  
 [构建亿级 ELK 日志平台](http://blog.51cto.com/13527416/2117141)  
+[Kibana用户手册](https://www.elastic.co/guide/cn/kibana/current/index.html)  
