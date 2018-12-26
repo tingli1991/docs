@@ -12,6 +12,7 @@
 [构建亿级 ELK 日志平台](http://blog.51cto.com/13527416/2117141)   
 
 ### 技术知识收集   
+[CSharpKit 微服务工具包](http://www.csharpkit.com/blogs.html)  
 [Newtonsoft高级应用](https://www.cnblogs.com/linyijia/p/5845771.html)  
 [一致性协议之ZAB协议](https://www.cnblogs.com/stateis0/p/9062133.html)  
 [Spring boot +Mybatis 实战](https://blog.csdn.net/WYpersist/article/details/80384707)  
