@@ -20,6 +20,7 @@
 [CentOS7使用firewalld打开关闭防火墙与端口](https://www.cnblogs.com/moxiaoan/p/5683743.html)  
 [ZooKeeper管理工具一览](https://www.jianshu.com/p/a3ee52849300)  
 [Elasticsearch 教程](http://www.ruanyifeng.com/blog/2017/08/elasticsearch.html)  
+[关于ES的一些使用心得](https://www.cnblogs.com/zhy-1992/p/7244440.html)  
 [Kafka Manager的使用](https://blog.csdn.net/qq_33689414/article/details/80958045)  
 [EKL原理与介绍](http://www.cnblogs.com/aresxin/p/8035137.html)  
 [Kibana用户手册](https://www.elastic.co/guide/cn/kibana/current/index.html)  
