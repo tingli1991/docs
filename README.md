@@ -10,6 +10,7 @@
 [kafka集群搭建](https://my.oschina.net/orrin/blog/1834218)  
 [Kafka---如何配置Kafka集群和zookeeper集群](https://www.cnblogs.com/5iTech/articles/6043224.html)  
 [构建亿级 ELK 日志平台](http://blog.51cto.com/13527416/2117141)   
+[TortoiseGit工具教程](https://www.cnblogs.com/xiuxingzhe/p/9312929.html)  
 
 ### 技术知识收集   
 [CSharpKit 微服务工具包](http://www.csharpkit.com/blogs.html)  
