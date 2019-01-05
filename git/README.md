@@ -6,7 +6,7 @@
         Git Bash     常用的命令行工具
         Git CMD      命令行窗口（不常用）
         Git GUI      带UI界面的工具
-		TortoiseGit  Git客户端工具(推荐)
+        TortoiseGit  Git客户端工具(推荐)
 
 #### 2.配置全局变量
         git config --global user.name "tingli1991"              设置的用户名
