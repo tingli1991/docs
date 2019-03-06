@@ -13,6 +13,7 @@
 [TortoiseGit工具教程](https://www.cnblogs.com/xiuxingzhe/p/9312929.html)  
 [.NET CORE微服务中CONSUL的相关使用](https://www.cnblogs.com/deraemon/p/dareomon.html)   
 [微服务监控zipkin+asp.net core](https://blog.csdn.net/qq_42606051/article/details/82148549)  
+[.NET Core微服务之基于Polly+AspectCore实现熔断与降级机制](https://www.cnblogs.com/edisonchou/p/9159644.html)  
 
 
 ### 技术知识收集   
