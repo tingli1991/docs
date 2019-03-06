@@ -11,7 +11,9 @@
 [Kafka---如何配置Kafka集群和zookeeper集群](https://www.cnblogs.com/5iTech/articles/6043224.html)  
 [构建亿级 ELK 日志平台](http://blog.51cto.com/13527416/2117141)   
 [TortoiseGit工具教程](https://www.cnblogs.com/xiuxingzhe/p/9312929.html)  
-[.NET CORE微服务中CONSUL的相关使用](https://www.cnblogs.com/deraemon/p/dareomon.html)  
+[.NET CORE微服务中CONSUL的相关使用](https://www.cnblogs.com/deraemon/p/dareomon.html)   
+[微服务监控zipkin+asp.net core](https://blog.csdn.net/qq_42606051/article/details/82148549)  
+
 
 ### 技术知识收集   
 [CSharpKit 微服务工具包](http://www.csharpkit.com/blogs.html)  
