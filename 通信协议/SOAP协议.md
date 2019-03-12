@@ -13,5 +13,19 @@
 - **基于XML**  
 - **允许你绕过防火墙**  
 
-### 基于SOAP协议的  
-- WebService
+#### 基于SOAP协议的  
+- WebService  
+
+#### Web Service和WebAPI的区别  
+##### Web Service：  
+- Web Service是基于SOAP协议，数据格式是XML；  
+- 数据传输只支持HTTP协议；  
+- 它的部署仅限于IIS；  
+- 非开源的产品，但是可以被任意一个了解XML的人使用；
+##### WebAPI：
+- 是一个简单的用于构建HTTP协议的新框架；
+- 是.NET产品开源的、理想的、构建REST-Ful服务的技术；
+- 它可以使用http协议的全部特点（例如：request/response以及缓存和版本控制等）；
+- 他可以部署在应用程序或者IIS上；
+- Response可以被Web API的MediaTypeFormatter转换成Json、XML 或者任何你想转换的格式；
+- 轻量级的框架，并且对限制带宽的设备，比如智能手机等支持的很好；
