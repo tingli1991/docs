@@ -24,8 +24,10 @@
 - 非开源的产品，但是可以被任意一个了解XML的人使用；
 ##### WebAPI：
 - 是一个简单的用于构建HTTP协议的新框架；
+- 数据的传输支持HTTP、HTTPS协议；
+- 数据的格式比较自由 可以是json、xml以及用户自定义；
 - 是.NET产品开源的、理想的、构建REST-Ful服务的技术；
 - 它可以使用http协议的全部特点（例如：request/response以及缓存和版本控制等）；
-- 他可以部署在应用程序或者IIS上；
+- 可以部署在IIS 等其他的Host/Server服务器上；
 - Response可以被Web API的MediaTypeFormatter转换成Json、XML 或者任何你想转换的格式；
 - 轻量级的框架，并且对限制带宽的设备，比如智能手机等支持的很好；
