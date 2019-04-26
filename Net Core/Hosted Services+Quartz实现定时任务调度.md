@@ -17,4 +17,4 @@
 
 ### 使用Hosted Service  
 #### 1. 创建一个控制台程序。  
-![](https://github-1251498502.cos.ap-chongqing.myqcloud.com/Stack.Notepads/Stack.Notepads.20190426001.png)
+![](https://github-1251498502.cos.ap-chongqing.myqcloud.com/Stack.Notepads/Notebook.201904260001.png)
