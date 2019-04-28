@@ -10,7 +10,6 @@
 | Zookeeper集群搭建                    | https://www.cnblogs.com/linuxprobe/p/5851699.html             |                                            |
 | ZooKeeper管理工具一览                | https://www.jianshu.com/p/a3ee52849300                        |                                            |
 | kafka集群搭建                        | https://my.oschina.net/orrin/blog/1834218                     |                                            |
-| kafka集群搭建                        | https://my.oschina.net/orrin/blog/1834218                     |                                            |
 | Kafka集群和zookeeper集群配置方法     | https://www.cnblogs.com/5iTech/articles/6043224.html          |                                            |
 | 构建亿级 ELK 日志平台                | http://blog.51cto.com/13527416/2117141                        |                                            |
 | NET CORE微服务中CONSUL的相关使用     | https://www.cnblogs.com/deraemon/p/dareomon.html              |                                            |
@@ -26,3 +25,4 @@
 | Kafka Manager的使用                  | https://blog.csdn.net/qq_33689414/article/details/80958045    |                                            |
 | EKL原理与介绍                        | http://www.cnblogs.com/aresxin/p/8035137.html                 |                                            |
 | Kibana用户手册                       | https://www.elastic.co/guide/cn/kibana/current/index.html     |                                            |
+
