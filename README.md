@@ -19,7 +19,8 @@
 | Navicat Premium 破解教程             | https://www.jianshu.com/p/42a33b0dda9c                        |                                                   |
 | Elasticsearch5.6.x安装教程           | https://www.cnblogs.com/lizichao1991/p/7809156.html           |                                                   |
 | ReadMe.md文档编辑语法                | https://www.jianshu.com/p/9ab92efc286a                        |                                                   |
-| Centos 7搭建Gitlab服务器超详细       | https://www.cnblogs.com/lizichao1991/p/7809156.html           |                                                   |
+| Centos 7搭建Gitlab服务器超详细       | https://blog.csdn.net/qingguiyu/article/details/81022509      |                                                   |
+| gitlab的完全卸载                     | https://www.cnblogs.com/ming369/p/10453636.html               |                                                   |
 | Zookeeper集群搭建                    | https://www.cnblogs.com/linuxprobe/p/5851699.html             |                                                   |
 | ZooKeeper管理工具一览                | https://www.jianshu.com/p/a3ee52849300                        |                                                   |
 | kafka集群搭建                        | https://my.oschina.net/orrin/blog/1834218                     |                                                   |
