@@ -39,6 +39,7 @@
 | Kafka Manager的使用                  | https://blog.csdn.net/qq_33689414/article/details/80958045    |                                                   |
 | EKL原理与介绍                        | http://www.cnblogs.com/aresxin/p/8035137.html                 |                                            	   |
 | Kibana用户手册                       | https://www.elastic.co/guide/cn/kibana/current/index.html     |                                                   |
+| MySql在CentOS7源码安装教程           | https://www.cnblogs.com/piaoyang2087/articles/7908795.html    |                                                   |
 
 
 
