@@ -20,6 +20,7 @@
 | ZooKeeper管理工具介绍                | https://www.jianshu.com/p/a3ee52849300                                                        |                                                   |
 | Elasticsearch 教程                   | http://www.ruanyifeng.com/blog/2017/08/elasticsearch.html                                     |                                                   |
 | Elasticsearch5.6.x安装教程           | https://www.cnblogs.com/lizichao1991/p/7809156.html                                           |                                                   |
+| Elasticsearch6.x集群部署             | https://www.jianshu.com/p/2e3e4334b036                                                        |                                                   |
 | ES的一些使用心得                     | https://www.cnblogs.com/zhy-1992/p/7244440.html                                               |                                                   |
 | kafka集群搭建                        | https://my.oschina.net/orrin/blog/1834218                                                     |                                                   |
 | Kafka Manager的使用                  | https://blog.csdn.net/qq_33689414/article/details/80958045                                    |                                                   |
