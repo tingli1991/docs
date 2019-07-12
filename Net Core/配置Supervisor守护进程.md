@@ -1,8 +1,8 @@
 ## 配置Supervisor守护进程  
 #### 1.安装 supervisor  
 ```BASH
-yum install python-setuptools
-easy_install supervisor
+rpm -Uvh http://mirrors.sohu.com/fedora-epel/epel-release-latest-7.noarch.rpm
+yum install supervisor
 ```
 #### 2.创建配置目录并生成配置文件  
 ```bash
