@@ -21,6 +21,7 @@
 | Elasticsearch 教程                   | http://www.ruanyifeng.com/blog/2017/08/elasticsearch.html                                     |                                                   |
 | Elasticsearch5.6.x安装教程           | https://www.cnblogs.com/lizichao1991/p/7809156.html                                           |                                                   |
 | Elasticsearch6.x集群部署             | https://www.jianshu.com/p/2e3e4334b036                                                        |                                                   |
+| ElasticSearch-Head集群管理插件安装   | https://blog.csdn.net/xzwspy/article/details/78386415                                         |                                                   |
 | ES的一些使用心得                     | https://www.cnblogs.com/zhy-1992/p/7244440.html                                               |                                                   |
 | kafka集群搭建                        | http://www.imooc.com/article/262018                                                           |                                                   |
 | Kafka Manager的使用                  | https://blog.csdn.net/qq_33689414/article/details/80958045                                    |                                                   |
@@ -28,6 +29,7 @@
 | EKL原理与介绍                        | http://www.cnblogs.com/aresxin/p/8035137.html                                                 |                                            	   |
 | 从ELK到EFK演进                       | https://blog.51cto.com/13527416/2051506                                                       |                                            	   |
 | 构建亿级ELK日志平台                  | http://blog.51cto.com/13527416/2117141                                                        |                                                   |
+| Redis集群搭建                        | https://www.jianshu.com/p/87da799fdf70?from=timeline&isappinstalled=0                         |                                                   |
 | VS Code常用插件集                    | https://www.cnblogs.com/vipstone/p/IDE.html                                                   |                                                   |
 | VS Code搭建Java开发环境              | https://www.cnblogs.com/WangBoBlog/p/9464281.html                                             |                                                   |
 | TortoiseGit工具教程                  | https://www.cnblogs.com/xiuxingzhe/p/9312929.html                                             |                                                   |
@@ -43,9 +45,3 @@
 | MySql在CentOS7源码安装教程           | https://www.cnblogs.com/piaoyang2087/articles/7908795.html                                    |                                                   |
 | EFCore访问MySql教程                  | https://dev.mysql.com/doc/connector-net/en/connector-net-entityframework-core.html            |                                                   |
 | MySql使用EF Core 2.0数据库迁移       | https://www.cnblogs.com/Starts_2000/p/mysql-efcore20-codefirst-dbfirst-migration-demo.html    |                                                   |
-
-
-
-
-
-
