@@ -30,6 +30,7 @@
 | 从ELK到EFK演进                       | https://blog.51cto.com/13527416/2051506                                                       |                                            	   |
 | 构建亿级ELK日志平台                  | http://blog.51cto.com/13527416/2117141                                                        |                                                   |
 | Redis集群搭建                        | https://www.jianshu.com/p/87da799fdf70?from=timeline&isappinstalled=0                         |                                                   |
+| RabbitMQ集群搭建                     | https://www.jianshu.com/p/db0f5496f0d2                                                        |                                                   |
 | VS Code常用插件集                    | https://www.cnblogs.com/vipstone/p/IDE.html                                                   |                                                   |
 | VS Code搭建Java开发环境              | https://www.cnblogs.com/WangBoBlog/p/9464281.html                                             |                                                   |
 | TortoiseGit工具教程                  | https://www.cnblogs.com/xiuxingzhe/p/9312929.html                                             |                                                   |
