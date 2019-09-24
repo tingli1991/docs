@@ -9,7 +9,7 @@
 	<name>duty Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<jackson.version>2.9.7</jackson.version>
+		<jackson.version>2.10.0.pr3</jackson.version>
 		<spring.version>5.1.1.RELEASE</spring.version>
 	</properties>
 	<dependencies>
