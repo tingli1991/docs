@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="duty.dao.UserMapper">
+	<resultMap id="BaseResultMap" type="duty.entity.User">
+		<id column="Id" jdbcType="INTEGER" property="id" />
+		<result column="UserName" jdbcType="VARCHAR"
+			property="username" />
+		<result column="Password" jdbcType="VARCHAR"
+			property="password" />
+		<result column="RealName" jdbcType="VARCHAR"
+			property="realname" />
+		<result column="Sex" jdbcType="INTEGER" property="sex" />
+		<result column="Age" jdbcType="INTEGER" property="age" />
+		<result column="Birthday" jdbcType="TIMESTAMP"
+			property="birthday" />
+		<result column="CreateTime" jdbcType="TIMESTAMP"
+			property="createtime" />
+		<result column="UpdateTime" jdbcType="TIMESTAMP"
+			property="updatetime" />
+		<result column="Remark" jdbcType="VARCHAR" property="remark" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		Id, UserName, Password, RealName, Sex, Age, Birthday,
+		CreateTime,
+		UpdateTime, Remark
+	</sql>
+	<select id="selectByPrimaryKey"
+		parameterType="java.lang.Integer" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from userinfo
+		where Id = #{id,jdbcType=INTEGER}
+	</select>
+	<select id="getUserList" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from userinfo where
+		<if test="userName != null">
+			UserName like CONCAT('%',#{userName},'%')
+		</if>
+		<if test="realName != null">
+			or RealName like CONCAT('%',#{realName},'%')
+		</if>
+	</select>
+	<select id="getUserByUserNameAndPwd" resultMap="BaseResultMap">
+		select
+		<include refid="Base_Column_List" />
+		from userinfo where UserName=#{userName} and Password=#{password}
+	</select>
+	<delete id="deleteByPrimaryKey"
+		parameterType="java.lang.Integer">
+		delete from userinfo
+		where Id = #{id,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert" parameterType="duty.entity.User">
+		insert into userinfo (Id,
+		UserName, Password,
+		RealName, Sex, Age,
+		Birthday, CreateTime,
+		UpdateTime,
+		Remark)
+		values (#{id,jdbcType=INTEGER},
+		#{username,jdbcType=VARCHAR},
+		#{password,jdbcType=VARCHAR},
+		#{realname,jdbcType=VARCHAR}, #{sex,jdbcType=INTEGER},
+		#{age,jdbcType=INTEGER},
+		#{birthday,jdbcType=TIMESTAMP},
+		#{createtime,jdbcType=TIMESTAMP},
+		#{updatetime,jdbcType=TIMESTAMP},
+		#{remark,jdbcType=VARCHAR})
+	</insert>
+	<insert id="insertSelective" parameterType="duty.entity.User">
+		insert into userinfo
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				Id,
+			</if>
+			<if test="username != null">
+				UserName,
+			</if>
+			<if test="password != null">
+				Password,
+			</if>
+			<if test="realname != null">
+				RealName,
+			</if>
+			<if test="sex != null">
+				Sex,
+			</if>
+			<if test="age != null">
+				Age,
+			</if>
+			<if test="birthday != null">
+				Birthday,
+			</if>
+			<if test="createtime != null">
+				CreateTime,
+			</if>
+			<if test="updatetime != null">
+				UpdateTime,
+			</if>
+			<if test="remark != null">
+				Remark,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="username != null">
+				#{username,jdbcType=VARCHAR},
+			</if>
+			<if test="password != null">
+				#{password,jdbcType=VARCHAR},
+			</if>
+			<if test="realname != null">
+				#{realname,jdbcType=VARCHAR},
+			</if>
+			<if test="sex != null">
+				#{sex,jdbcType=INTEGER},
+			</if>
+			<if test="age != null">
+				#{age,jdbcType=INTEGER},
+			</if>
+			<if test="birthday != null">
+				#{birthday,jdbcType=TIMESTAMP},
+			</if>
+			<if test="createtime != null">
+				#{createtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="updatetime != null">
+				#{updatetime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="remark != null">
+				#{remark,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<update id="updateByPrimaryKeySelective"
+		parameterType="duty.entity.User">
+		update userinfo
+		<set>
+			<if test="username != null">
+				UserName = #{username,jdbcType=VARCHAR},
+			</if>
+			<if test="password != null">
+				Password = #{password,jdbcType=VARCHAR},
+			</if>
+			<if test="realname != null">
+				RealName = #{realname,jdbcType=VARCHAR},
+			</if>
+			<if test="sex != null">
+				Sex = #{sex,jdbcType=INTEGER},
+			</if>
+			<if test="age != null">
+				Age = #{age,jdbcType=INTEGER},
+			</if>
+			<if test="birthday != null">
+				Birthday = #{birthday,jdbcType=TIMESTAMP},
+			</if>
+			<if test="createtime != null">
+				CreateTime = #{createtime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="updatetime != null">
+				UpdateTime = #{updatetime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="remark != null">
+				Remark = #{remark,jdbcType=VARCHAR},
+			</if>
+		</set>
+		where Id = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateByPrimaryKey" parameterType="duty.entity.User">
+		update userinfo
+		set UserName = #{username,jdbcType=VARCHAR},
+		Password =
+		#{password,jdbcType=VARCHAR},
+		RealName = #{realname,jdbcType=VARCHAR},
+		Sex = #{sex,jdbcType=INTEGER},
+		Age = #{age,jdbcType=INTEGER},
+		Birthday =
+		#{birthday,jdbcType=TIMESTAMP},
+		CreateTime =
+		#{createtime,jdbcType=TIMESTAMP},
+		UpdateTime =
+		#{updatetime,jdbcType=TIMESTAMP},
+		Remark = #{remark,jdbcType=VARCHAR}
+		where Id = #{id,jdbcType=INTEGER}
+	</update>
+</mapper>

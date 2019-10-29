@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Keepwatch 排班系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/admin_style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/skins/tpphp.css" />
+	<link type="text/css" rel="stylesheet" href="../js/jQueryZdialog/css/zdialog.css" />
+	<link type="text/css" rel="stylesheet" href="../js/bootstrap/css/bootstrap.css" media="screen">
+	<link type="text/css" rel="stylesheet" href="../js/bootstrap/css/bootstrap-datetimepicker.css" media="screen">
+	<script type="text/javascript" src="../vue/vue.min.js"></script>
+	<script type="text/javascript" src="../vue/vue-resource.js"></script>
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../js/js.cookie.min.js"></script>
+	<script type="text/javascript" src="../js/jQueryZdialog/js/zdialog.js"></script>
+	<script type="text/javascript" src="../js/keepwatch.config.js"></script>
+	<script type="text/javascript" src="../js/bootstrap/bootstrap.js"></script>
+	<script type="text/javascript" src="../js/bootstrap/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+</head>
+
+<body>
+	<div id="app_duty_add" style="padding-left:30px;padding-top:30px;">
+		<div action="" class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="dtp_input1" class="col-md-2 control-label"><b>员工列表：</b></label>
+				<div class="input-group col-md-5">
+					<select class="form-control" v-model="UserId">
+						<option v-for="user in UserList" v-bind:value="user.id" v-bind:selected="UserId==user.id">{{user.realname}}</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="dtp_beginTime" class="col-md-2 control-label"><b>开始时间：</b></label>
+				<div class="input-group date form_datetime col-md-5" data-link-field="dtp_beginTime">
+					<input class="form-control" size="16" type="text" readonly />
+					<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+				</div>
+				<input type="hidden" id="dtp_beginTime" />
+			</div>
+			<div class="form-group">
+				<label for="dtp_endTime" class="col-md-2 control-label"><b>结束时间：</b></label>
+				<div class="input-group date form_datetime col-md-5" data-link-field="dtp_endTime">
+					<input class="form-control" size="16" type="text" readonly />
+					<span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+				</div>
+				<input type="hidden" id="dtp_endTime">
+			</div>
+			<div class="form-group">
+				<label for="dtp_input1" class="col-md-2 control-label"><b>备&nbsp;&nbsp;注：</b></label>
+				<div class="input-group col-md-5">
+					<textarea class="form-control" rows="6" v-model="Remark"></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="dtp_input1" class="col-md-2 control-label"><b></b></label>
+				<div class="input-group col-md-5">
+					<button type="button" class="btn btn-default btn-lg " v-on:click="submit">提&nbsp;&nbsp;交</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var accessToken = Cookies.get(keepwatchConf.keepwatch_accesstokenKey);
+	new Vue({
+		el: '#app_duty_add',
+		data: {
+			"UserId": 0,
+			"Remark": "",
+			"UserList": [],
+			"AccessToken": accessToken
+		},
+		http: {
+			root: '/',
+			headers: { "AccessToken": accessToken }
+		},
+		mounted: function () {
+			$('.form_datetime').datetimepicker({
+				weekStart: 1,
+				todayBtn: 1,
+				autoclose: 1,
+				startView: 2,
+				forceParse: 0,
+				showMeridian: 1,
+				todayHighlight: 1,
+				format: 'yyyy-mm-dd HH:mm:ss'
+			});
+			var self = this;
+			var apiurl = keepwatchConf.serviceUrl + "/user/getUserList";
+			self.$http.get(apiurl).then(function (response) {
+				if (!response.body.success) {
+					$.DialogByZ.Alert({
+						Title: "错误" + "[" + response.body.errcode + "]", Content: response.body.errmsg, BtnL: "确定", FunL: function () {
+							$.DialogByZ.Close();
+							//会话超时，跳转登录页面
+							if (response.body.errcode = "100001") {
+								window.location = "login.html";
+							}
+						}
+					});
+					return false;
+				}
+				this.$data.UserList = [{ id: 0, realname: "请选择用户" }];
+				for (let index = 0; index < response.body.data.length; index++) {
+					var user = response.body.data[index];
+					this.$data.UserList.push({ id: user.id, realname: user.realname });
+				}
+			});
+		},
+		methods: {
+			submit: function () {
+				debugger
+				var user = {
+					"userid": this.$data.UserId,
+					"remark": this.$data.Reamrk,
+					"endtime": new Date($("#dtp_endTime").val()).getTime(),
+					"begintime": new Date($("#dtp_beginTime").val()).getTime()
+				};
+
+				if (this.$data.UserId <= 0 || !user.begintime || !user.endtime) {
+					$.DialogByZ.Alert({
+						Title: "错误[100000]", Content: "员工或时间必填！！！", BtnL: "确定", FunL: function () {
+							$.DialogByZ.Close();
+						}
+					});
+					return false;
+				}
+
+				var apiurl = keepwatchConf.serviceUrl + "/workCalendar/addWorkCalendar";
+				$.DialogByZ.Loading('image/loading.png');
+				$.ajax({
+					async: false,
+					type: "post",
+					dataType: "json",
+					headers: {
+						"AccessToken": accessToken
+					},
+					data: JSON.stringify({
+						"userid": this.$data.UserId,
+						"remark": this.$data.Reamrk,
+						"endtime": new Date($("#dtp_endTime").val()).getTime(),
+						"begintime": new Date($("#dtp_beginTime").val()).getTime()
+					}),
+					contentType: "application/json",
+					url: keepwatchConf.serviceUrl + "/workCalendar/addWorkCalendar",
+					success: function (data) {
+						debugger
+						if (!data.success) {
+							$.DialogByZ.Alert({
+								Title: "错误" + "[" + data.errcode + "]", Content: data.errmsg, BtnL: "确定", FunL: function () {
+									$.DialogByZ.Close();
+								}
+							});
+							return false;
+						}
+						$.DialogByZ.Close();
+						Cookies.set(keepwatchConf.keepwatch_accesstokenKey, data.data.accesstoken, { expires: keepwatchConf.session_expires });
+						console.log("keepwatch_token:" + data.data.accesstoken);
+						window.location = "main.html";
+					},
+					error: function (response) {
+						debugger
+						$.DialogByZ.Alert({
+							Title: "错误！", Content: "登录异常，请联系管理员", BtnL: "确定", FunL: function () {
+								$.DialogByZ.Close();
+							}
+						});
+						return false;
+					}
+				});
+			}
+		}
+	});
+</script>
+
+</html>

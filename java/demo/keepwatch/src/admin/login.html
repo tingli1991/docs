@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Keepwatch 排班系统</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link type="text/css" rel="stylesheet" href="js/jQueryZdialog/css/zdialog.css" />
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/js.cookie.min.js"></script>
+	<script type="text/javascript" src="js/jQueryZdialog/js/zdialog.js"></script>
+	<script type="text/javascript" src="js/keepwatch.config.js"></script>
+	<script>
+		$(function () {
+			var _select = $('.select');
+			_select.click(function () {
+				$(this).find('ul').show();
+			})
+
+			$('.select li').click(function () {
+				var eid = $(this).attr('eid');
+				var eid_input = '<input type="hidden" value="' + eid + '" name="eid" id="eid" \/>';
+				var _eidhtml = $(this).html();
+				$('.eid_value').html(_eidhtml);
+				if ($('#eid').attr('value')) {
+					$('#eid').attr('value', eid);
+				}
+			})
+			$('.select ul').hover(function () { }, function () {
+				$(this).hide();
+			})
+
+			$(document).keyup(function (event) {
+				if (event.keyCode == 13) {
+					$("#bin_login").trigger("click");
+				}
+			});
+
+			$('#bin_login').click(function (e) {
+				var userName = $('#input_userName').val();
+				var password = $('#input_password').val();
+				if (!userName || !password) {
+					$.DialogByZ.Alert({
+						Title: "错误！", Content: "请输入用户名或密码！", BtnL: "确定", FunL: function () {
+							$.DialogByZ.Close();
+						}
+					});
+					return false;
+				}
+
+				$.DialogByZ.Loading('image/loading.png');
+				$.ajax({
+					async: false,
+					type: "post",
+					dataType: "json",
+					data: JSON.stringify({
+						"username": userName,
+						"password": password
+					}),
+					contentType: "application/json",
+					url: keepwatchConf.serviceUrl + "/user/login",
+					success: function (data) {
+						if (!data.success) {
+							$.DialogByZ.Alert({
+								Title: "错误" + "[" + data.errcode + "]", Content: data.errmsg, BtnL: "确定", FunL: function () {
+									$.DialogByZ.Close();
+								}
+							});
+							return false;
+						}
+						$.DialogByZ.Close();
+						Cookies.set(keepwatchConf.keepwatch_accesstokenKey, data.data.accesstoken, { expires: keepwatchConf.session_expires });
+						console.log("keepwatch_token:" + data.data.accesstoken);
+						window.location = "main.html";
+					},
+					error: function () {
+						$.DialogByZ.Alert({
+							Title: "错误！", Content: "登录异常，请联系管理员", BtnL: "确定", FunL: function () {
+								$.DialogByZ.Close();
+							}
+						});
+						return false;
+					}
+				});
+			});
+		})
+	</script>
+</head>
+
+<body>
+	<div class="login">
+		<div class="login_form">
+			<div class="login_info">
+				<div class="login_info_title">选择登录版本：</div>
+				<div class="select">
+					<p class="eid_value">中文版</p>
+					<ul>
+						<li eid="english">English</li>
+						<li eid="chinese">中文版</li>
+					</ul>
+					<input type="hidden" value="chinese" name="eid" id="eid" />
+				</div>
+			</div>
+			<div class="form_info">
+				<div class="field">
+					<label>用户名：</label>
+					<input id="input_userName" type="text" class="text" size="20">
+				</div>
+				<div class="field">
+					<label>密　码：</label>
+					<input id="input_password" type="password" class="text" size="20">
+				</div>
+				<div class="field">
+					<label></label>
+					<button id="bin_login" class="button" style="margin-left:75px;_margin-left:48px"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

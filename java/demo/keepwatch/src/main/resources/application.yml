@@ -1,0 +1,35 @@
+# application.yml
+server:
+  port: 8080
+  tomcat.max-threads: 0  
+  tomcat.uri-encoding: UTF-8
+
+spring:
+    datasource:
+        name: keepwatch
+        url: jdbc:mysql://192.168.3.10:3306/keepwatch
+        username: root
+        password: ChinaNet910111
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        #老的数据驱动：com.mysql.jdbc.Driver
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        filters: stat,wall,log4j,logback
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+        cachePrepStmts: true  # 开启二级缓存
+        useGlobalDataSourceStat: true # 合并多个DruidDataSource的监控数据
+
+mybatis:
+  type-aliases-package: com.mapper
+  mapper-locations: classpath:mapping/*.xml
