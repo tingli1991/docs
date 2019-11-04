@@ -6,10 +6,13 @@ Nacos是一个易于构建云原生应用的动态服务发现、配置管理和
   3.动态 DNS 服务;  
   4.服务及其元数据管理;  
 
-###### 安装Nacos
-Nacos的下载地址：https://github.com/alibaba/nacos/releases  
-解压命令：  
-``` C#
+##### 安装Nacos
+[Nacos的下载地址](https://github.com/alibaba/nacos/releases "Nacos的GitHub下载地址")
+###### 解压命令：  
+``` Bashh
 tar -zxvf nacos.tar.gz
 ```
-
+###### 进入bin目录然后启动一个单机版
+``` Bashh
+sh startup.sh -m standalone
+```
