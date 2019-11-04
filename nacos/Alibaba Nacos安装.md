@@ -7,12 +7,21 @@ Nacos是一个易于构建云原生应用的动态服务发现、配置管理和
   4.服务及其元数据管理;  
 
 ##### 安装Nacos
-[Nacos的下载地址](https://github.com/alibaba/nacos/releases "Nacos的GitHub下载地址")
+###### Nacos的下载地址(这里使用gz的格式安装)   
+  [nacos-server-1.1.4.tar.gz](https://github.com/alibaba/nacos/releases/download/1.1.4/nacos-server-1.1.4.tar.gz)  
+  [nacos-server-1.1.4.zip](https://github.com/alibaba/nacos/releases/download/1.1.4/nacos-server-1.1.4.zip)  
 ###### 解压命令：  
-``` Bashh
+``` Bash
 tar -zxvf nacos.tar.gz
 ```
-###### 进入bin目录然后启动一个单机版
-``` Bashh
+###### 进入bin目录然后启动一个单机版(运行效果如下图所示)
+``` Bash
 sh startup.sh -m standalone
+```
+![](https://upload-images.jianshu.io/upload_images/12893700-716d254f4719b26e.png?imageMogr2/auto-orient/strip|imageView2/2/w/1030/format/webp)
+
+##### 执行如下的Linux命令来打开Nacos监听端口的防火墙
+``` Bash
+firewall-cmd --zone=public --add-port=8848/tcp --permanent 
+firewall-cmd --reload
 ```
