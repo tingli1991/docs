@@ -9,5 +9,7 @@ Nacos是一个易于构建云原生应用的动态服务发现、配置管理和
 ###### 安装Nacos
 Nacos的下载地址：https://github.com/alibaba/nacos/releases  
 解压命令：  
-`tar -zxvf nacos.tar.gz`
+``` C#
+tar -zxvf nacos.tar.gz
+```
 
