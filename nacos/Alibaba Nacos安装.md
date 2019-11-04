@@ -28,3 +28,22 @@ firewall-cmd --reload
 ##### 登录Nacos平台
 ###### 登录地址：http://服务器IP地址:88848/nacos/  
 ###### 初始账户&密码：nacos
+
+
+##### 常见的踩坑 
+###### 使用命令sh startup.sh -m standalone启动报错：
+  1.错误详情：
+``` Bash
+/usr/local/java/jdk1.8.0_191//bin/java  -Xms512m -Xmx512m -Xmn256m -Dnacos.standalone=true 
+-Djava.ext.dirs=/usr/local/java/jdk1.8.0_191//jre/lib/ext:/usr/local/java/jdk1.8.0_191//lib/ext:/usr/local/nacos/plugins/cmdb:/usr/local/nacos/plugins/mysql 
+-Xloggc:/usr/local/nacos/logs/nacos_gc.log -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+PrintGCTimeStamps -XX:+UseGCLogFileRotation -XX:NumberOfGCLogFiles=10 
+-XX:GCLogFileSize=100M -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 -Dnacos.home=/usr/local/nacos 
+-Dloader.path=/usr/local/nacos/plugins/health -jar /usr/local/nacos/target/nacos-server.jar  --spring.config.location=classpath:/,classpath:/config/,file:./,file:./config/,file:/usr/local/nacos/conf/ 
+--logging.config=/usr/local/nacos/conf/nacos-logback.xml --server.max-http-header-size=524288
+nacos is starting with standalone
+nacos is starting，you can check the /usr/local/nacos/logs/start.out
+```
+  2.解决办法(使用如下命令执行)  
+``` Bash
+bash -f ./startup.sh -m standalone
+```
