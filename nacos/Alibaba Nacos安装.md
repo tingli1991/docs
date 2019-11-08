@@ -26,7 +26,7 @@ firewall-cmd --zone=public --add-port=8848/tcp --permanent
 firewall-cmd --reload
 ```
 ##### 登录Nacos平台
-###### 登录地址：http://服务器IP地址:88848/nacos/  
+###### 登录地址：http://服务器IP地址:8848/nacos/  
 ###### 初始账户&密码：nacos
 
 
