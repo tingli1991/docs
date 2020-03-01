@@ -9,8 +9,9 @@ yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/d
 ```
 ##### 3.版本预览&安装
 ```Bash
-yum list docker-ce --showduplicates | sort -r
-yum install -y docker-ce-18.06.3.ce-3.el7
+sudo yum remove docker  docker-common docker-selinux docker-engine  卸载旧版本
+yum list docker-ce --showduplicates | sort -r                       查看版本里列表
+yum install -y docker-ce-18.06.3.ce-3.el7                           安装指定版本
 ```
 ##### 4.启动&设置开机启动
 ```Bash
