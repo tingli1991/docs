@@ -166,3 +166,10 @@ Creating nginx             ... done
 Creating harbor-jobservice ... done
 ✔ ----Harbor has been installed and started successfully.----
 ```
+
+##### docker-compose启动与停止命令
+``` bash
+docker-compose start
+docker-compose stop
+docker-compose up -d
+```
