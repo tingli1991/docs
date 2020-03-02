@@ -1,6 +1,82 @@
-#### harbor安装教程
+### harbor安装教程
 ##### 操作系统、应用及版本信息
 * Linux：CentOS 7.6
 * Docker : 18.06.3-ce
 * docker-compose version:1.25.4
 * Harbor：v1.10.1
+
+##### 安装docker-compose
+Harbor是通过docker-compose来管理镜像的;  
+所以在Harbor主机安装docker-compose是必须的首要的一步;
+``` bash
+curl -L https://github.com/docker/compose/releases/download/1.25.4/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose 
+chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+```
+
+##### Harbor的域名
+如果没有域名的话，可以自己定义一个域名，并在Harbor主机和Docker主机通过向/etc/hosts文件添加条目完成自定义域名与Harbor主机IP的映射关系。
+本文中自定义的域名是www.harbor.com 配置如下：
+```bash
+192.168.3.10 www.barhor.com
+```
+
+##### 生成自签证书
+Docker默认通过HTTPS与Harbor通信的，虽然可以改为HTTP方式，但需要修改的配置项会很多，而且也不安全;  
+配套的CA证书自然是少不了的;
+```bash
+mkdir -p /usr/local/harbor/cert && cd /usr/local/harbor/cert                  创建证书存放目录
+openssl genrsa -out ca.key 4096                                               生成根证书私钥（无加密）
+openssl req -x509 -new -nodes -sha512 -days 3650 -subj "/C=CN/ST=Beijing/L=Beijing/O=ccx/OU=plat/CN=192.168.3.10" -key ca.key -out ca.crt                                                                        生成自签名证书（使用已有私钥ca.key自行签发根证书）
+
+openssl genrsa -out www.harbor.com.key 4096                                   生成服务器端自己域名的key
+openssl req -sha512 -new  -subj "/C=CN/ST=Beijing/L=Beijing/O=ccx/OU=plat/CN=192.168.3.10" -key www.harbor.com.key -out www.harbor.com.csr                                                            生成服务器端自己域名的CSR签名请求
+```
+##### 生成一个 openssl 命令需要的外部配置文件 externalfile.ext  
+这个文件可以随意命名，但是要记住，后面对的命令还要用到。
+文件内容中主要是subjectAltName这一项
+如果配IP就写IP.1=192.168.xxx.xxx
+如果配域名就写 DNS.1=xxx.xxx.com
+```bash
+vim externalfile.ext
+
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+extendedKeyUsage = serverAuth 
+subjectAltName = @alt_names
+[alt_names]
+IP.1=192.168.3.10
+DNS.1=www.harbor.com
+```
+
+##### 通过外部配置文件 externalfile.ext和 csr 生成 crt
+```bash
+openssl x509 -req -sha512 -days 3650 -extfile externalfile.ext -CA ca.crt -CAkey ca.key -CAcreateserial -in www.harbor.com.csr -out www.harbor.com.crt
+```
+
+##### 将服务端的 crt 转换成客户端用的 cert
+```bash
+openssl x509 -inform PEM -in www.harbor.com.crt -out www.harbor.com.cert
+```
+至此，所有的文件都已全部生成
+```
+[root@dev cert_harbor]# ll
+total 32
+-rw-r--r-- 1 root root 2017 Feb 23 13:44 ca.crt
+-rw-r--r-- 1 root root 3243 Feb 23 13:42 ca.key
+-rw-r--r-- 1 root root   17 Feb 23 13:53 ca.srl
+-rw-r--r-- 1 root root  232 Feb 23 13:52 externalfile.ext
+-rw-r--r-- 1 root root 2049 Feb 23 13:54 www.harbor.com.cert
+-rw-r--r-- 1 root root 2049 Feb 23 13:53 www.harbor.com.crt
+-rw-r--r-- 1 root root 1700 Feb 23 13:49 www.harbor.com.csr
+-rw-r--r-- 1 root root 3247 Feb 23 13:47 www.harbor.com.key
+```
+
+
+
+
+
+
+
+
