@@ -75,6 +75,67 @@ total 32
 -rw-r--r-- 1 root root 3247 Feb 23 13:47 harbor.litingli.com.key
 ```
 
+##### 修改配置文件harbor.yml
+```bash
+[root@dev110 ~] vim /usr/local/harbor/harbor.yml
+hostname: #IP地址或域名
+http:
+	port: 80
+https:
+	port: 443
+	certificate: /usr/local/harbor/cert/harbor.litingli.com.crt # 这里是证书信息
+	private_key: /usr/local/harbor/cert/harbor.litingli.com.key # 这里是证书信息
+harbor_admin_password: ChinaNet910111 #  根据需要修改Web端admin用户的密码，默认为Harbor12345
+database:
+	password: ChinaNet910111  #  为harbor内置数据库root用户的密码，默认为root123
+data_volumn: /data
+log:
+    level: info
+    location: /usr/local/harbor/logs # harbor日志存放路径
+```
+
+##### 先更新参数
+```bash
+[root@dev110 ~]# cd /usr/local/harbor
+[root@dev110 harbor]# ./prepare
+```
+
+##### 再进行安装
+```bash
+[root@dev110 harbor]# ./install.sh
+[Step 0]: checking if docker is installed ...
+Note: docker version: 19.03.6
+[Step 1]: checking docker-compose is installed ...
+Note: docker-compose version: 1.25.4
+[Step 2]: loading Harbor images ...
+...
+这里会很慢，因为要拉取很多镜像
+...
+[Step 3]: preparing environment ...
+[Step 4]: preparing harbor configs ...
+prepare base dir is set to /home/k8s/harbor
+Generated configuration file: /config/log/logrotate.conf
+...
+Generated configuration file: /compose_location/docker-compose.yml
+Clean up the input dir
+[Step 5]: starting Harbor ...
+WARNING: The Docker Engine you're using is running in swarm mode.
+Compose does not use swarm mode to deploy services to multiple nodes in a swarm. All containers will be scheduled on the current node.
+To deploy your application across the swarm, use `docker stack deploy`.
+Creating network "harbor_harbor" with the default driver
+Creating harbor-log ... done
+Creating registry      ... done
+Creating harbor-portal ... done
+Creating harbor-db     ... done
+Creating redis         ... done
+Creating registryctl   ... done
+Creating harbor-core   ... done
+Creating nginx             ... done
+Creating harbor-jobservice ... done
+✔ ----Harbor has been installed and started successfully.----
+```
+
+
 
 
 
