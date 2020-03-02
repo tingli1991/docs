@@ -25,14 +25,20 @@ docker-compose --version
 Docker默认通过HTTPS与Harbor通信的，虽然可以改为HTTP方式，但需要修改的配置项会很多，而且也不安全;  
 配套的CA证书自然是少不了的;
 ```bash
-mkdir -p /usr/local/harbor/cert && cd /usr/local/harbor/cert                  创建证书存放目录
-openssl genrsa -out ca.key 4096                                               生成根证书私钥（无加密）
-openssl req -x509 -new -nodes -sha512 -days 3650 -subj "/C=CN/ST=Beijing/L=Beijing/O=ccx/OU=plat/CN=192.168.3.10" -key ca.key -out ca.crt                                                                        
-                                                                              生成自签名证书（使用已有私钥ca.key自行签发根证书）
+创建证书存放目录
+mkdir -p /usr/local/harbor/cert && cd /usr/local/harbor/cert
 
-openssl genrsa -out harbor.litingli.com.key 4096                                        生成服务器端自己域名的key
-openssl req -sha512 -new  -subj "/C=CN/ST=Beijing/L=Beijing/O=ccx/OU=plat/CN=192.168.3.10" -key harbor.litingli.com.key -out harbor.litingli.com.csr                                                                                     
-                                                                              生成服务器端自己域名的CSR签名请求
+生成根证书私钥（无加密）
+openssl genrsa -out ca.key 4096
+
+生成自签名证书（使用已有私钥ca.key自行签发根证书）
+openssl req -x509 -new -nodes -sha512 -days 3650 -subj "/C=CN/ST=Beijing/L=Beijing/O=ccx/OU=plat/CN=192.168.3.10" -key ca.key -out ca.crt
+
+生成服务器端自己域名的key
+openssl genrsa -out harbor.litingli.com.key 4096
+
+生成服务器端自己域名的CSR签名请求
+openssl req -sha512 -new  -subj "/C=CN/ST=Beijing/L=Beijing/O=ccx/OU=plat/CN=192.168.3.10" -key harbor.litingli.com.key -out harbor.litingli.com.csr
 ```
 ##### 生成一个 openssl 命令需要的外部配置文件 externalfile.ext  
 这个文件可以随意命名，但是要记住，后面对的命令还要用到。
