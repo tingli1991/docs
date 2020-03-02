@@ -90,7 +90,7 @@ total 32
 ```
 ###### 在Harbor主机，执行：
 ```bash
-scp ./harbor.litingli.com.cert ./harbor.litingli.com.key root@192.168.3.10:/etc/docker/certs.d/harbor.litingli.com/
+scp /usr/local/harbor/cert/harbor.litingli.com.cert /usr/local/harbor/cert/harbor.litingli.com.key root@192.168.3.10:/etc/docker/certs.d/harbor.litingli.com/
 ```
 ###### 在Docker主机修改 /etc/docker/daemon.json，主要是增加"insecure-registries":["http://harbor.litingli.com"]
 ```bash
