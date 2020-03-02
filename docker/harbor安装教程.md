@@ -75,6 +75,31 @@ total 32
 -rw-r--r-- 1 root root 3247 Feb 23 13:47 harbor.litingli.com.key
 ```
 
+##### 为各个docker客户端分发证书
+将Harbor主机上带域名的.cert和.key证书文件拷贝到docker客户端所在主机的/etc/docker/certs.d/xxx.xxx.com/目录下。
+下面以192.168.3.10这台docker客户端主机上的操作为例进行介绍  
+###### 在Docker主机上执行：
+```bash
+ mkdir -p /etc/docker/certs.d/harbor.litingli.com/
+```
+###### 在Harbor主机，执行：
+```bash
+scp ./harbor.litingli.com.cert ./harbor.litingli.com.key root@192.168.3.10:/etc/docker/certs.d/harbor.litingli.com/
+```
+###### 在Docker主机修改 /etc/docker/daemon.json，主要是增加"insecure-registries":["http://harbor.litingli.com"]
+```bash
+[root@dev111 ~]# vim /etc/docker/daemon.json
+{
+  ...
+  "insecure-registries":["http://harbor.cn"],
+  ...
+}
+```
+###### 重启Docker
+```bash
+systemctl daemon-reload && systemctl restart docker
+```
+
 ##### 修改配置文件harbor.yml
 ```bash
 [root@dev110 ~] vim /usr/local/harbor/harbor.yml
@@ -101,6 +126,7 @@ log:
 ```
 
 ##### 再进行安装
+当你看到Harbor has been installed and started successfully时，我要恭喜你安装成功了。
 ```bash
 [root@dev110 harbor]# ./install.sh
 [Step 0]: checking if docker is installed ...
@@ -134,12 +160,3 @@ Creating nginx             ... done
 Creating harbor-jobservice ... done
 ✔ ----Harbor has been installed and started successfully.----
 ```
-
-
-
-
-
-
-
-
-
