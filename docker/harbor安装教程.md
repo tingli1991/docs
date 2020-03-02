@@ -169,7 +169,7 @@ Creating harbor-jobservice ... done
 
 ##### docker-compose启动与停止命令
 ``` bash
-docker-compose start
-docker-compose stop
-docker-compose up -d
+cd /usr/local/harbor && docker-compose start
+cd /usr/local/harbor && docker-compose stop
+cd /usr/local/harbor && docker-compose up -d
 ```
