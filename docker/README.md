@@ -19,17 +19,19 @@
 
 ### 基本命令介绍  
 
-|        命令                      |                解析                                          |
-|----------------------------------|--------------------------------------------------------------|
-| docker --version                 | 查看docker的版本号                                           |
-| docker --help                    | 查看docker的帮助文档                                         |
-| docker xxx --help                | 查看具体命令的帮助文档(xxx表示子命令)                        |
-| docker run xxx                   | 拉去docker镜像(xxx:表示镜像名称，例如redis)                  |
-| docker images                    | 查看本地cocker存放的镜像                                     |
-| docker ps                        | 查看当前正在运行的容器                                       |
-| sudo systemctl start docker      | 启动已经安装好的docker                                       |
-| sudo systemctl restart docker    | 重启docker服务                                               |
-| sudo systemctl stop docker       | 停止docker服务                                               |  
+|        命令                           |                解析                                          |
+|---------------------------------------|--------------------------------------------------------------|
+| docker --version                      | 查看docker的版本号                                           |
+| docker --help                         | 查看docker的帮助文档                                         |
+| docker xxx --help                     | 查看具体命令的帮助文档(xxx表示子命令)                        |
+| docker run xxx                        | 拉去docker镜像(xxx:表示镜像名称，例如redis)                  |
+| docker images                         | 查看本地cocker存放的镜像                                     |
+| docker ps                             | 查看当前正在运行的容器                                       |
+| sudo systemctl start docker           | 启动已经安装好的docker                                       |
+| sudo systemctl restart docker         | 重启docker服务                                               |
+| sudo systemctl stop docker            | 停止docker服务                                               |
+| docket build -t xxx:tag .             | 生成镜像                                                     |
+| docket run -it -p 6801:6801 xxx:tag   | 运行并挂载镜像                                                |
 
 
 ### 安装 Docker 
