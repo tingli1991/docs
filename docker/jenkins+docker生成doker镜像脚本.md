@@ -1,3 +1,6 @@
+#### 参考资料
+ https://blog.csdn.net/u013711462/article/details/80219693
+ 
 #### Dockerfile文件
 注意：由于框架结构的原因 该文件需要放在.sln所在的文件目录
 ```C#
