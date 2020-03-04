@@ -1,4 +1,7 @@
 ### harbor安装教程
+#### 参考资料
+https://blog.csdn.net/jason9211/article/details/104464342/
+
 ##### 操作系统、应用及版本信息
 * Linux：CentOS 7.6
 * Docker : 18.06.3-ce
