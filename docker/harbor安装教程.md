@@ -106,6 +106,17 @@ scp /usr/local/harbor/cert/harbor.litingli.com.cert /usr/local/harbor/cert/harbo
 systemctl daemon-reload && systemctl restart docker
 ```
 
+###### 有关证书的注意事项
+如果如下错误：
+```bash
+Error response from daemon: Get https://harbor.litingli.com/v2/: x509: certificate signed by unknown authority
+```
+解决办法：
+修改文件 /usr/lib/systemd/system/docker.service 的 ExecStart 参数如下
+```bash
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock  --insecure-registry https://harbor.litingli.com
+```
+
 ##### 修改配置文件harbor.yml
 ```bash
 [root@dev110 ~] vim /usr/local/harbor/harbor.yml
