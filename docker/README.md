@@ -26,12 +26,16 @@
 | docker xxx --help                     | 查看具体命令的帮助文档(xxx表示子命令)                        |
 | docker run xxx                        | 拉去docker镜像(xxx:表示镜像名称，例如redis)                  |
 | docker images                         | 查看本地cocker存放的镜像                                     |
+| docker inspect xxx                    | 查看容器的运行目录                                           |
 | docker ps                             | 查看当前正在运行的容器                                       |
+| docker ps -a                          | 查看所有的容器(包括未启用的)                                 |
 | sudo systemctl start docker           | 启动已经安装好的docker                                       |
 | sudo systemctl restart docker         | 重启docker服务                                               |
 | sudo systemctl stop docker            | 停止docker服务                                               |
-| docket build -t xxx:tag .             | 生成镜像                                                     |
-| docket run -it -p 6801:6801 xxx:tag   | 运行并挂载镜像                                                |
+| docker build -t xxx:tag .             | 生成镜像                                                     |
+| docker stop xxx                       | 停止docker容器(xxx表示容器Id)                                |
+| docker start xxx                      | 启动docker容器(xxx表示容器Id)                                |
+| docker run -it -p 6801:6801 xxx:tag   | 运行并挂载镜像                                               |
 
 
 ### 安装 Docker 
@@ -63,11 +67,4 @@ Docker的安装其实很简单，官网已经有很成熟的教程，直接按�
 
 ### 构建单机多容器的运行环境（docker命令：docker run -d -p --name image） 
 ![环境示意图](https://github-1251498502.cos.ap-chongqing.myqcloud.com/Docker/20180826184415.png)  
-![集群管理后台显示](https://github-1251498502.cos.ap-chongqing.myqcloud.com/Docker/20180826212023.png)  
-
-
-
-
-
-
-
+![集群管理后台显示](https://github-1251498502.cos.ap-chongqing.myqcloud.com/Docker/20180826212023.png)
